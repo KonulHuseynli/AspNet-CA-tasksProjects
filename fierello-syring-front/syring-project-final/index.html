@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Animate css-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <!--font Awesome css-->
+    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
+    <!--Google Fonts css-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Slider Slick css -->
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+    <!--main css-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <!-- header start -->
+    <header>
+        <div class="header-bottom no-select">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <nav class="col-10 d-flex justify-content-around">
+                        <ul class="navigation  d-none d-xl-flex">
+                            <li class="home">
+                                <span class="title active-nav">Home</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="index.html" class="active-nav">Home</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pages">
+                                <span class="title">Pages</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="faq.html">FAQ</a>
+                                        <a href="pricings.html">Pricings</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="doctor">
+                                <span class="title">Doctors</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="find-doctor.html">Find A Doctor</a>
+                                        <a href="doctor-single.html">Doctor Single</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="departments">
+                                <span class="title">Departments</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="medical-department.html">Medical Department</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="shop">
+                                <span class="title">Shop</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="sidebar-left.html">Sidebar left</a>
+                                        <a href="cart.html">Cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="shop">
+                                <span class="title">Account</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="register.html">Register</a>
+                                        <a href="login.html">Login</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="search-basket-menu d-flex align-items-center">
+                            <div class="search d-none d-md-block"><img src="assets/images/search-icon.png" alt=""></div>
+                            <div class="basket">
+                                <img src="assets/images/shop-basket.png" alt="">
+                                <span class="cart-items-count text-center">0</span>
+                            </div>
+                            <div class="burger-menu d-block d-xl-none"><i class="fas fa-bars"></i></div>
+                        </div>
+                    </nav>
+                    <div class="mini-cart">
+                        <span class="no-cart-item">No Products In The Basket</span>
+                        <ul class="cart-items">
+
+                        </ul>
+                        <div class="total-price  justify-content-between">
+                            <div class="subtotal">Subtotal:</div>
+                            <div class="total-price-self"><span>$</span><span class="total-price-number">0</span></div>
+                        </div>
+                        <div class="text-center"><a href="cart.html" class="button">View Basket</a></div>
+                        <div class="text-center"><a href="checkout.html" class="button">Checkout</a></div>
+                    </div>
+                    <nav class="mobile-nav d-xl-none">
+                        <ul id="accordion">
+                            <li>
+                                <span class="active-nav">Home</span>
+                                <div class="mn-sub-menu">
+                                    <a href="index.html" class="active-nav">Home</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Pages</span>
+                                <div class="mn-sub-menu">
+                                    <a href="our-clinic.html">Our Clinic</a>
+                                    <a href="contact-us.html">Contact us</a>
+                                    <a href="faq.html">FAQ</a>
+                                    <a href="book-appointment.html">Book an Appointment</a>
+                                    <a href="pricings.html">Pricings</a>
+                                    <a href="schedule.html">Schedule</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span>Doctors</span>
+                                <div class="mn-sub-menu">
+                                    <a href="find-doctor.html">Find A Doctor</a>
+                                    <a href="doctor-single.html">Doctor Single</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span>Departments</span>
+                                <div class="mn-sub-menu">
+                                    <a href="medical-department.html">Medical Department</a>
+                                    <a href="dental-clinic.html">Dental Clinic</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Blog</span>
+                                <div class="mn-sub-menu">
+                                    <a href="post-standard.html">Single Post Standard</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Shop</span>
+                                <div class="mn-sub-menu">
+                                    <a href="sidebar-left.html">Sidebar left</a>
+                                    <a href="cart.html">Cart</a>
+                                    <a href="checkout.html">Checkout</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Elements</span>
+                                <div class="mn-sub-menu">
+                                    <a>Coming Soon</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header ends -->
+
+
+    <!-- main starts -->
+    <main>
+        <!-- banner section starts -->
+        <section class="banner no-select">
+            <div class="banner-page banner-page-1" style="background-image: url(assets/images/banner-image-1.jpg);">
+                <div class="caption caption-1" data-aos="fade-up" data-aos-duration="2000">
+                    Inspiring Better Health
+                </div>
+                <div class="auxilary-caption" data-aos="fade-up" data-aos-duration="2000">
+                    17 years of experience
+                </div>
+                <div class="button" data-aos="fade-up" data-aos-duration="2000">
+                    Learn more
+                </div>
+            </div>
+            <div class="banner-page banner-page-2" style="background-image: url(assets/images/banner-image-2.jpg);">
+                <div class="caption caption-2">
+                    Dedication Beyond Measure
+                </div>
+                <div class="auxilary-caption">
+                    17 years of experience
+                </div>
+                <div class="button">
+                    Learn more
+                </div>
+            </div>
+            <div class="banner-page banner-page-3" style="background-image: url(assets/images/banner-image-3.jpg);">
+                <div class="caption caption-3 ">
+                    Trusted for our expertise
+                </div>
+                <div class="auxilary-caption">
+                    17 years of experience
+                </div>
+                <div class="button">
+                    Learn more
+                </div>
+            </div>
+
+            <div class="bullets">
+                <div class="bullet bullet-1 selected"></div>
+                <div class="bullet bullet-2"></div>
+                <div class="bullet bullet-3"></div>
+            </div>
+
+            <div class="overlay">
+
+            </div>
+        </section>
+        <!-- banner section ends -->
+
+
+
+        <!-- vision section starts -->
+        <section class="vision no-select">
+            <div class="container">
+                <div class="vision-top row  justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="col-lg-10 text-center">
+                        <h2 class="sub-heading">Our vision</h2>
+                        <h2 class="heading">Combining Quality Care& Modern Conveniences.</h2>
+                        <span class="description">We started One Medical with the belief that clinical excellence
+                            commitment to service and
+                            a modern approach make for a truly great experience. To bring our vision to life, we
+                            listened to our patients. thoughtfully applied technology, and hired the best doctors to
+                            create a practice that is designed specifically to meet your needs.</span>
+                    </div>
+                </div>
+                <div class="vision-bottom row">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="item" data-aos="fade-up" data-aos-duration="2000">
+                            <img src="assets/images/stethoscope.png" alt="" class="item-icon">
+                            <div class="item-content">
+                                <h5 class="title">World-Class Care</h5>
+                                <p class="item-text">Rigorously selected board-certified doctors and longer
+                                    appointments with doctors who
+                                    actually listen.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 mt-3 mt-md-0">
+                        <div class="item" data-aos="fade-up" data-aos-duration="2000">
+                            <img src="assets/images/physician.png" alt="" class="item-icon">
+                            <div class="item-content">
+                                <h5 class="title">Putting You First</h5>
+                                <p class="item-text">Same-day appointments, convenient ofice locations, and
+                                    on-site lab test with no appointment required.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                        <div class="item" data-aos="fade-up" data-aos-duration="2000">
+                            <img src="assets/images/phone-vibration.png" alt="" class="item-icon">
+                            <div class="item-content">
+                                <h5 class="title">Everywhere Access</h5>
+                                <p class="item-text">Book appointments and get 24/7 care via phone, app, or
+                                    online, and email directly with your doctor.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                        <div class="item" data-aos="fade-up" data-aos-duration="2000">
+                            <img src="assets/images/stopwatch.png" alt="" class="item-icon">
+                            <div class="item-content">
+                                <h5 class="title">Attention to Service</h5>
+                                <p class="item-text">95% of appointments start on time or early, and we’re
+                                    in-network with most PPO and HMO plans.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- vision section ends -->
+
+
+        <!-- about section starts -->
+        <section class="about about-home no-select">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="about-content" data-aos="fade-up" data-aos-duration="2000">
+                            <span class="sub-heading">About Us</span>
+                            <h2 class="heading">Your Health is <br>
+                                Our <span class="defaultcolor">Primary Concern</span></h2>
+                            <p class="about-content">
+                                We serve our communities by providing exceptional care, as we prevent illness,
+                                restore health and provide comfort to all who entrust us with their care.
+                            </p>
+                            <p class="description">
+                                Over 180 physicians in 40 diffrent specialties work together with the 2,000+ employees
+                                at Syring Medical Center to offer a full spectrum of diagnostic and treatment services
+                                for people of all ages.
+                            </p>
+                            <div class="signature">
+                                <img src="assets/images/signature.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="about-images text-sm-center text-md-left" data-aos="fade-up"
+                            data-aos-duration="2000">
+                            <img src="assets/images/about-1.jpg" class="about-image about-image-1 mt-5 mt-md-0"></img>
+                            <img src="assets/images/about-2.jpg" class="about-image about-image-2  mt-5 mt-md-0"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about section ends -->
+
+
+
+
+        <!-- department section starts -->
+        <section class="department no-select">
+            <div class="container">
+                <div class="department-top row justify-content-center" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="col-lg-10 text-center">
+                        <h2 class="sub-heading">What we do best</h2>
+                        <h2 class="heading">Medical Departments</h2>
+                        <span class="description">Expert physician specialists and caring clinical staff provide you
+                            with an exceptional patient care is what sets Syring Medical Center apaert health care
+                            experience.</span>
+                    </div>
+                </div>
+                <div class="department-center">
+                    <div class="row ">
+                        <div class="col-sm-12 col-lg-4">
+                            <div class="item" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="assets/images/home-heart.png" alt="" class="item-icon">
+                                <div class="item-content">
+                                    <h5 class="title">Pulmonary</h5>
+                                    <p class="item-text">Provides medical care to patients who have problems with their
+                                        heart or circulation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-4 mt-4 mt-lg-0">
+                            <div class="item" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="assets/images/home-brain.png" alt="" class="item-icon">
+                                <div class="item-content">
+                                    <h5 class="title">Neurology</h5>
+                                    <p class="item-text">This unit deals with disorders of the nervous system, including
+                                        the brain and spinal cord.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-4 mt-4 mt-lg-0">
+                            <div class="item" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="assets/images/home-bone.png" alt="" class="item-icon">
+                                <div class="item-content">
+                                    <h5 class="title">
+                                        Prthopaedics</h5>
+                                    <p class="item-text">Orthopaedic departments treat problems that affect your
+                                        musculoskeletal system.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-4 mt-4">
+                            <div class="item" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="assets/images/home-tooth.png" alt="" class="item-icon">
+                                <div class="item-content">
+                                    <h5 class="title">Dental Clinic</h5>
+                                    <p class="item-text">We are here to provide a full range of exceptional quality care
+                                        for dental services.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-4 mt-4">
+                            <div class="item" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="assets/images/home-liver.png" alt="" class="item-icon">
+                                <div class="item-content">
+                                    <h5 class="title">Pulmonary</h5>
+                                    <p class="item-text">Syring is one of the leading medical facilities for the
+                                        diagnostic and tearment of lung</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-4 mt-4">
+                            <div class="item" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="assets/images/home-stomach.png" alt="" class="item-icon">
+                                <div class="item-content">
+                                    <h5 class="title">Urology</h5>
+                                    <p class="item-text">The urology department is run by consultant urology surgeons
+                                        and their surgical teams.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="department-bottom text-center">
+                <div class="button" data-aos="fade-up" data-aos-duration="2000">View All Departments</div>
+            </div>
+            </div>
+        </section>
+        <!-- department section ends -->
+
+        <!-- video section starts -->
+        <section class="video" style="background-image: url(assets/images/covervideo.jpg)" data-aos="fade-up"
+            data-aos-duration="2000">
+            <div class="video-overlay d-flex justify-content-center align-items-center">
+                <div class="play-button d-flex justify-content-center align-items-center">
+                    <i class="fas fa-caret-right triangle"></i>
+                    <div class="scaling-background"></div>
+                </div>
+            </div>
+        </section>
+        <!-- video section ends -->
+
+        <!-- doctors section starts -->
+        <section class="doctors no-select">
+            <div class="container">
+                <div class="doctors-top row d-flex justify-content-between" data-aos="fade-up" data-aos-duration="2000">
+                    <h2 class="sub-heading">Our Professional Doctor</h2>
+                    <div class="doctors-top-right">
+                        <span>View all members</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="doctors-bottom row ">
+                    <div class="col-sm-12 col-md-6 col-lg-3  text-center" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="doctor-item">
+                            <img src="assets/images/doctor-1.png" alt="">
+                            <div class="doctor-info">
+                                <h4 class="doctor-name">Alex Koztex</h4>
+                                <p class="doctor-speciality">Dentis</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 mt-5 mt-md-0 text-center" data-aos="fade-up"
+                        data-aos-duration="2000">
+                        <div class="doctor-item">
+                            <img src="assets/images/doctor-2.png" alt="">
+                            <div class="doctor-info">
+                                <h4 class="doctor-name">Mia Clark</h4>
+                                <p class="doctor-speciality">GYNECOLOGY</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3  mt-5 mt-lg-0 text-center" data-aos="fade-up"
+                        data-aos-duration="2000">
+                        <div class="doctor-item">
+                            <img src="assets/images/doctor-3.png" alt="">
+                            <div class="doctor-info">
+                                <h4 class="doctor-name">Alex Koztex</h4>
+                                <p class="doctor-speciality">Dentis</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 mt-5 mt-lg-0 text-center" data-aos="fade-up"
+                        data-aos-duration="2000">
+                        <div class="doctor-item">
+                            <img src="assets/images/doctor-4.png" alt="">
+                            <div class="doctor-info">
+                                <h4 class="doctor-name">Alex Koztex</h4>
+                                <p class="doctor-speciality">Dentis</p>
+                                <div class="social-media">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- doctors section ends -->
+
+        <!-- why-choose section starts -->
+        <section class="why-choose no-select">
+            <div class="container">
+                <div class="row">
+                    <div class="why-choose-left col-lg-6" data-aos="fade-up" data-aos-duration="2000">
+                        <h2 class="heading">Why Choose the
+                            <span class="defaultcolor">Syring Medical Center</span>
+                        </h2>
+                        <p class="description">
+                            Led by the joint care coordinator, our team has been hand-picked for their positive
+                            attitudes, motivational skills and a desire to provide outstanding service.
+                        </p>
+                        <ul class="checks">
+                            <li class="check-element">
+                                <i class="fas fa-check check"></i>
+                                Free Ambulance Transport
+                            </li>
+                            <li class="check-element">
+                                <i class="fas fa-check check"></i>
+                                Highly Qualified Doctors
+                            </li>
+                            <li class="check-element">
+                                <i class="fas fa-check check"></i>
+                                24×7 Emergency Services
+                            </li>
+                            <li class="check-element">
+                                <i class="fas fa-check check"></i>
+                                Leading Technology
+                            </li>
+                            <li class="check-element">
+                                <i class="fas fa-check check"></i>
+                                Patient Centered Care
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="why-choose-right col-lg-6 text-lg-right" data-aos="fade-up" data-aos-duration="2000">
+                        <div style="background-image: url(assets/images/why-choose-photo.jpg)">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- why-choose section ends -->
+
+        <!-- count-to starts -->
+        <div class="container">
+            <div class="row align-items-center count-to no-select  " data-aos="fade-up" data-aos-duration="2000">
+                <div class=" col-12 col-md-4 col-lg-3  text-center count-item">
+                    <i class="fas fa-plus count-plus"></i>
+                    <p class='numscroller' data-min='1' data-max='980' data-delay='30' data-increment='10'></p>
+                    <span class="satisfied-patients">Satisfied Patients</span>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mt-4 mt-md-0  text-center count-item">
+                    <i class="fas fa-plus count-plus"></i>
+                    <p class='numscroller' data-min='1' data-max='300' data-delay='10' data-increment='5'></p>
+                    <span class="pro-doctor">Professional Doctor</span>
+                </div>
+                <div class=" col-12 col-md-4 col-lg-3 mt-4 mt-md-0 text-center count-item">
+                    <div class="d-flex justify-content-center">
+                        <p class='numscroller d-inline-block' data-min='1' data-max='100' data-delay='5'
+                            data-increment='2'></p>
+                        <p>%</p>
+                    </div>
+                    <span class="quality">Quality</span>
+                </div>
+                <div class="d-block  d-md-none d-lg-block col-12 col-lg-3 mt-4 mt-md-0 text-center count-item">
+                    <i class="fas fa-plus count-plus plus-experience"></i>
+                    <p class='numscroller' data-min='1' data-max='17' data-delay='2' data-increment='1'></p>
+                    <span class="year-experience">Year Experience</span>
+                </div>
+            </div>
+        </div>
+        <!-- count-to ends -->
+
+        <!-- latest-news section starts -->
+        <section class="latest-news no-select">
+            <div class="container">
+                <div class="latest-news-top row d-flex justify-content-between align-items-center" data-aos="fade-up"
+                    data-aos-duration="2000">
+                    <h2 class="heading">Lastest News</h2>
+                </div>
+                <div class="latest-news-bottom" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="news-item">
+                        <div class="item-photo">
+                            <img src="assets/images/news-photo-1.jpg" alt="">
+                        </div>
+                        <div class="date-type  text-center">
+                            <span class="date">April 3, 2019</span>
+                            <span class="type">| Cancer</span>
+                        </div>
+                        <div class="item-text text-center">
+                            How Some Cancer Patients May Be Able to Avoid Hair Loss
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="item-photo">
+                            <img src="assets/images/news-photo-2.jpg" alt="">
+                        </div>
+                        <div class="date-type text-center">
+                            <span class="date">April 3, 2019</span>
+                            <span class="type">| Cancer</span>
+                        </div>
+                        <div class="item-text text-center">
+                            How Some Cancer Patients May Be Able to Avoid Hair Loss
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="item-photo">
+                            <img src="assets/images/news-photo-3.jpg" alt="">
+                        </div>
+                        <div class="date-type text-center">
+                            <span class="date">April 3, 2019</span>
+                            <span class="type">| Cancer</span>
+                        </div>
+                        <div class="item-text text-center">
+                            How Some Cancer Patients May Be Able to Avoid Hair Loss
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="item-photo">
+                            <img src="assets/images/news-photo-4.jpg" alt="">
+                        </div>
+                        <div class="date-type text-center">
+                            <span class="date">April 3, 2019</span>
+                            <span class="type">| Cancer</span>
+                        </div>
+                        <div class="item-text text-center">
+                            How Some Cancer Patients May Be Able to Avoid Hair Loss
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="item-photo">
+                            <img src="assets/images/news-photo-5.jpg" alt="">
+                        </div>
+                        <div class="date-type text-center">
+                            <span class="date">April 3, 2019</span>
+                            <span class="type">| Cancer</span>
+                        </div>
+                        <div class="item-text text-center">
+                            How Some Cancer Patients May Be Able to Avoid Hair Loss
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="item-photo">
+                            <img src="assets/images/news-photo-6.jpg" alt="">
+                        </div>
+                        <div class="date-type text-center">
+                            <span class="date">April 3, 2019</span>
+                            <span class="type">| Cancer</span>
+                        </div>
+                        <div class="item-text text-center">
+                            How Some Cancer Patients May Be Able to Avoid Hair Loss
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="item-photo">
+                            <img src="assets/images/news-photo-7.jpg" alt="">
+                        </div>
+                        <div class="date-type text-center">
+                            <span class="date">April 3, 2019</span>
+                            <span class="type">| Cancer</span>
+                        </div>
+                        <div class="item-text text-center">
+                            How Some Cancer Patients May Be Able to Avoid Hair Loss
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="item-photo">
+                            <img src="assets/images/news-photo-8.jpg" alt="">
+                        </div>
+                        <div class="date-type text-center">
+                            <span class="date">April 3, 2019</span>
+                            <span class="type">| Cancer</span>
+                        </div>
+                        <div class="item-text text-center">
+                            How Some Cancer Patients May Be Able to Avoid Hair Loss
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="item-photo">
+                            <img src="assets/images/news-photo-9.jpg" alt="">
+                        </div>
+                        <div class="date-type text-center">
+                            <span class="date">April 3, 2019</span>
+                            <span class="type">| Cancer</span>
+                        </div>
+                        <div class="item-text text-center">
+                            How Some Cancer Patients May Be Able to Avoid Hair Loss
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="item-photo">
+                            <img src="assets/images/news-photo-10.jpg" alt="">
+                        </div>
+                        <div class="date-type text-center">
+                            <span class="date">April 3, 2019</span>
+                            <span class="type">| Cancer</span>
+                        </div>
+                        <div class="item-text text-center">
+                            How Some Cancer Patients May Be Able to Avoid Hair Loss
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- latest-news section ends -->
+    </main>
+    <!-- main ends -->
+
+
+    <!-- footer starts -->
+    <footer class="footer-2 no-select">
+        <div class="container">
+            <!-- footer-top starts -->
+            <div class="footer-top row">
+                <div class="healthcare col-12 col-lg-4">
+                    <div class="logo">
+                        <a href="#"><img src="assets/images/white-logo.svg" alt=""></a>
+                    </div>
+                    <p class="healthcare-text">With a background in the healthcare software industry and a desire to
+                        build great technology to
+                        help companies succeed in making healthcare better.</p>
+                </div>
+                <div class="about-us col-12 col-lg-2 mt-4 mt-lg-0">
+                    <h5 class="footer-top-col-title">Quick Links</h5>
+                    <ul>
+                        <li class="footer-pass">
+                            <i class="fas fa-arrow-right arrow-right"></i>
+                            <a href="medical-department.html">Departments</a>
+                        </li>
+                        <li class="footer-pass">
+                            <i class="fas fa-arrow-right arrow-right"></i>
+                            <a href="find-doctor.html">Find A Doctor</a>
+                        </li>
+                        <li class="footer-pass">
+                            <i class="fas fa-arrow-right arrow-right"></i>
+                            <a href="faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact col-12 col-lg-3 mt-4 mt-lg-0">
+                    <h5 class="footer-top-col-title">Contact</h5>
+                    <p class="contact-text">34th Avenue – New York, W2 3XE United State.<br>
+                        info@yourdomain.com<br>
+                        +(123) 1800-88-66</p>
+                    <div class="social-media d-inline-block">
+                        <a href="https://www.facebook.com/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a href="https://dribbble.com/">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="instagram col-12 col-lg-3 mt-4 mt-lg-0">
+                    <h5 class="footer-top-col-title">Instagram</h5>
+                    <div class="container">
+                        <div class="row instagram-contents">
+                            <div class="col-4">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-1.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-2.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-3.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 pt-3  pt-md-5 pt-lg-2">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-4.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 pt-3 pt-md-5 pt-lg-2">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-5.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-4 pt-3 pt-md-5 pt-lg-2">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-6.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-top ends -->
+
+        <!-- footer-bottom starts -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <span class="col-12 col-lg-6 mt-3 mt-lg-0">© 2022 Spyropress. All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom ends -->
+    </footer>
+    <!-- footer ends -->
+
+    <!-- modal section starts -->
+    <section class="modal">
+        <div class="container">
+            <div class="quit-button d-flex justify-content-end"><i class="fas fa-times quit-x"></i></div>
+            <div class="modal-content">
+                <iframe class="modal-video" width="auto" height="600" src="" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <!-- modal section ends -->
+
+    <!-- scroll-top button starts -->
+    <div class="st-btn">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <!-- scroll-top button ends -->
+
+
+
+
+    <!--scripts start-->
+    <!--Animations-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+    <!--jquery-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- local storage -->
+    <script src="js/jquery.shoppingcart.js"></script>
+    <!--CountTo-->
+    <script src="js/countTo.js"></script>
+    <!--Slider Slick Js-->
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <!--bootstrap-->
+    <script src="assets/bootstrap/bootstrap.min.js"></script>
+    <!--javascript-->
+    <script src="js/script.js"></script>
+    <!--scripts end-->
+</body>
+
+</html>

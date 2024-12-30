@@ -1,0 +1,47 @@
+﻿@using FlowerProjectP323.Models
+@model List<Product>
+@{
+    foreach (var products in Model)
+    {
+
+        <div class="mkdf-pli mkdf-item-space ">
+            <div class="mkdf-pli-inner">
+                <div class="mkdf-pli-image">
+                    <span class="mkdf-pli-new-product">@products.Status</span>
+                    <img width="620" height="800"
+                 src="~/assets/img/@products.MainPhotoName"
+                 class="attachment-woocommerce_single size-woocommerce_single wp-post-image"
+                 alt="h"
+                 srcset="/assets/img/@products.MainPhotoName 620w, /assets/img/@products.MainPhotoName 233w"
+                 sizes="(max-width: 620px) 100vw, 620px"
+                 loading="eager" />
+                </div>
+                <a class="mkdf-pli-link" itemprop="url"
+               href="../../product/schefflera/index.html"
+               title="Schefflera"></a>
+            </div>
+            <div class="mkdf-pli-text-wrapper">
+                <h6 itemprop="name"
+                class="entry-title mkdf-pli-title">
+                    <a itemprop="url"
+                   href="../../product/schefflera/index.html">@products.Name</a>
+                </h6>
+                <div class="mkdf-pli-add-to-cart mkdf-default-skin">
+                    <a rel="nofollow"
+                   href="indexcb0b.html?add-to-cart=246"
+                   data-quantity="1" data-product_id="246"
+                   data-product_sku="563654"
+                   class="button add_to_cart_button ajax_add_to_cart mkdf-button">
+                        Add
+                        to cart
+                    </a>
+                </div>
+                <div class="mkdf-pli-price">
+                    <span class="woocommerce-Price-amount amount">
+                        <span class="woocommerce-Price-currencySymbol">&#036;</span>@products.Price
+                    </span>
+                </div>
+            </div>
+        </div>
+    }
+}

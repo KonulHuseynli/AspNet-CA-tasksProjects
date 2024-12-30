@@ -1,0 +1,25 @@
+﻿@using Core.Constants
+@using Web.Areas.Admin.ViewModels.HomeAnimation
+@model HomeAnimationUpdateVM
+
+<form enctype="multipart/form-data" asp-action="update" asp-controller="homeanimation" method="post">
+
+
+
+    <div class="form-group">
+        <label asp-for="CoverPhoto">CoverPhoto</label>
+        <input class="form-control" asp-for="CoverPhoto">
+        <span asp-validation-for="CoverPhoto"></span>
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="VideoUrl">MainPhoto</label>
+        <input class="form-control" asp-for="VideoUrl">
+        <span asp-validation-for="VideoUrl"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a class="btn btn-danger" asp-action="index" asp-controller="homeanimation">Cancel</a>
+</form>

@@ -1,0 +1,137 @@
+.catalog__right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 70px;
+    width: 100%;
+}
+.catalog__products {
+    display: grid;
+    gap: 35px 16px;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+}
+.catalog .facetwp-type-pager {
+    max-height: 100px!important;
+}
+
+.catalog .facetwp-facet {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.catalog .facetwp-load-more {
+    background: #0d2a39;
+    border: none;
+    color: #fff;
+    font-family: Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    padding: 26px 68px;
+    text-align: center;
+}
+button {
+    cursor: pointer;
+}
+
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+}
+.woocommerce div.product {
+    margin-bottom: 0;
+    position: relative;
+}
+
+.catalog__product {
+    background: 0 0!important;
+    padding: 0!important;
+}
+.product__image {
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+a, li, p, ul {
+    font-family:'Cinzel';
+}
+a {
+    text-decoration: none;
+}
+a {
+    color: inherit;
+}
+.product__image img {
+    height: auto;
+    object-fit: cover;
+    transition: .5s;
+    width: 100%;
+}
+.woocommerce img, .woocommerce-page img {
+    max-width: 100%;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+img {
+    display: block;
+}
+
+audio, canvas, embed, iframe, img, object, svg, video {
+    vertical-align: middle;
+}
+.product__name {
+    color: #0d2a39;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2.5px;
+    line-height: 1.2;
+    margin-top: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+.product__price {
+    color: #b4886f;
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-top: 10px;
+    text-align: center;
+}
+.product__image img.hover, .product__image.hover-visible:hover img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.product__image img.hover {
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: .5s;
+    z-index: 2;
+}
+.myybutton{
+    padding: 20px;
+}
+.mybutton{
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(90, 90, 255);
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}

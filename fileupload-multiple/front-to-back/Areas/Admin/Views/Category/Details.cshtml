@@ -1,0 +1,28 @@
+﻿@using front_to_back.Models
+@model Category
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Details Category
+                        </p>
+
+                        <span>@Model.Title</span>
+
+                        <br />
+                        <br />
+
+                        <button>
+                            <a class="btn btn-light" asp-action="index" asp-controller="category" asp-area="admin">Previous</a>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

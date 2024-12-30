@@ -1,0 +1,221 @@
+// #region footer  general properties
+footer {
+    padding-top: 111px;
+    background-color: $color-black;
+
+    .footer-top {
+
+        .healthcare {
+            .healthcare-text {
+                line-height: 2;
+                padding-top: 27px;
+            }
+        }
+
+        .footer-top-col-title {
+            color: $color-white;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            font-weight: $font-weight;
+        }
+
+        li {
+            padding-bottom: 5px;
+        }
+
+        .contact {
+            p {
+                font-size: 14px;
+                line-height: 2;
+            }
+        }
+    }
+
+    .footer-bottom {
+        padding: 20px 0;
+
+        .policy {
+            margin-left: 15px;
+        }
+    }
+}
+
+// #endregion footer general properties
+
+
+// #region footer-1
+.footer-1 {
+    background-color: $color-footer;
+
+    .footer-top {
+        padding-bottom: 60px;
+
+        .healthcare-text {
+            color: $color-grey-lighter;
+        }
+
+        .footer-pass{
+            position: relative;
+            left: 0;
+            transition: .3s all linear;
+
+            .arrow-right {
+                color: $main-color;
+                font-size: 12px;
+                padding-right: 7px;
+            }
+
+            &:hover{
+                left: 10px;
+
+                a{
+                    color: $main-color;
+                }
+            }
+        }
+
+
+        a {
+            color: $color-grey-lighter;
+        }
+
+        .contact{
+
+            .contact-text {
+                color: $color-grey-lighter;
+            }
+
+            .social-media {
+                margin-top: 15px;
+                a {
+                    padding: 0 9.5px;
+        
+                    i {
+                        font-size: 13px;
+                        color: $color-grey-lighter;
+                    }
+                }
+            }
+
+        }
+
+        .twitter-slider-element{
+            outline: none;
+            .twitter-text {
+                background: $color-twit-news;
+                padding: 14px 19px;
+                color: $color-grey-lighter;
+                font-size: 14px;
+            }
+    
+            .twitter-info {
+                padding-top: 23px;
+    
+                .twitter-icon {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    background-color: $color-twitter;
+                    line-height: 32px;
+    
+                    .twitter {
+                        color: $color-white;
+                        padding-left: 10px;
+                    }
+                }
+    
+                .twitter-info-right {
+                    color: $color-grey-lighter;
+                    padding-left: 20px;
+    
+                    .twitter-url {
+                        font-size: 15px;
+                    }
+    
+                    .twitter-date {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .footer-bottom {
+        background-color: $color-footer-2;
+        color: $color-grey-lighter;
+    }
+}
+
+
+
+// #endregion footer
+
+
+// #region footer 2 section
+.footer-2 {
+    background-color: $color-footer-3;
+
+    .footer-top {
+        padding-bottom: 60px;
+
+        .healthcare-text {
+            color: $color-gray-light;
+        }
+
+        .footer-pass {
+            position: relative;
+            left: 0;
+            transition: .3s all linear;
+
+            .arrow-right {
+                color: $main-color;
+                font-size: 12px;
+                padding-right: 7px;
+            }
+
+            &:hover {
+                left: 10px;
+
+                a {
+                    color: $main-color;
+                }
+            }
+        }
+
+
+        a {
+            color: $color-gray-light;
+        }
+
+        .contact {
+
+            .contact-text {
+                color: $color-gray-light;
+            }
+
+            .social-media {
+                margin-top: 15px;
+
+                a {
+                    padding: 0 9.5px;
+
+                    i {
+                        font-size: $font-size;
+                        color: $color-white;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .footer-bottom {
+        color: $color-gray-light;
+    }
+}
+
+// #endregion footer 2 section
+

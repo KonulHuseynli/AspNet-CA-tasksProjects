@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Presentation</name>
+    </assembly>
+    <members>
+        <member name="M:Presentation.Controllers.CategoryController.GetAll">
+            <summary>
+            Return Category List
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.CategoryController.Get(System.Int32)">
+            <summary>
+            Find Category for id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.CategoryController.Create(Business.DTOs.Category.Request.CategoryCreateDto)">
+            <summary>
+            Create Category
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.CategoryController.Update(Business.DTOs.Category.Request.CategoryUpdateDTO)">
+            <summary>
+            Update Category
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.CategoryController.Delete(System.Int32)">
+            <summary>
+            Delete Category
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

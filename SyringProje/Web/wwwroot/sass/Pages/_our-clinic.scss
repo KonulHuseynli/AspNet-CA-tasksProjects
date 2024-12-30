@@ -1,0 +1,82 @@
+// #region facilities section
+.facilities {
+    padding: 100px 0;
+    background-color: $color-gray-lighter;
+
+    .facilities-top {
+
+        .photo-self {
+            height: 500px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .facilities-center {
+        padding: 100px 0;
+
+        .facilities-photo {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .description {
+            font-size: $font-size;
+            color: $color-gray-light;
+        }
+    }
+
+
+
+    .facilities-bottom {
+        background-color: $color-gray-lighter;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// #endregion facilities section
+
+
+
+
+// #region clinic section
+.clinic {
+    padding: 82px 0;
+
+    img {
+        width: 100%;
+    }
+
+    .clinic-info {
+        margin-top: 20px;
+
+        h5 {
+            font-weight: $font-weight;
+            color: $color-gray-darker;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: $font-size;
+            color: $color-dark-light;
+        }
+    }
+
+
+}
+
+// #endregion clinic section
+
+// #region map section
+.map{
+    line-height: 0; 
+}
+// #endregion map section
+
+
+
+

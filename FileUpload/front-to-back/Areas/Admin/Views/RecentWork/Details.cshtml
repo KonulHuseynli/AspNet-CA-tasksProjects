@@ -1,0 +1,33 @@
+﻿@using front_to_back.Models
+@model RecentWorkComponent
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+             <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  
+                  <p class="card-description">
+                    Details Work
+                  </p>
+
+                  <span>@Model.Title</span>
+
+                  <br>
+                  <span>@Model.Text</span>
+                  <br>
+                  <span>@Model.FilePath</span>
+                 
+                  <form method="post" asp-action="index" asp-controller="recentwork" asp-area="admin" asp-route-id="@Model.Id">
+                      <button class="btn btn-danger">
+                          Previuos
+                      </button>
+
+                  </form>
+
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Animate css-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <!--font Awesome css-->
+    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
+    <!--Google Fonts css-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Slider Slick css -->
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+    <!--main css-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cart</title>
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <div class="header-bottom no-select">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <nav class="col-10 d-flex justify-content-around">
+                        <ul class="navigation  d-none d-xl-flex">
+                            <li class="home">
+                                <span class="title active-nav">Home</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="index.html" class="active-nav">Home</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pages">
+                                <span class="title">Pages</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="faq.html">FAQ</a>
+                                        <a href="pricings.html">Pricings</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="doctor">
+                                <span class="title">Doctors</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="find-doctor.html">Find A Doctor</a>
+                                        <a href="doctor-single.html">Doctor Single</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="departments">
+                                <span class="title">Departments</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="medical-department.html">Medical Department</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="shop">
+                                <span class="title">Shop</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="sidebar-left.html">Sidebar left</a>
+                                        <a href="cart.html">Cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="shop">
+                                <span class="title">Account</span>
+                                <div class="sub-menu">
+                                    <div class="sub-menu-wrapper">
+                                        <a href="register.html">Register</a>
+                                        <a href="login.html">Login</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="search-basket-menu d-flex align-items-center">
+                            <div class="search d-none d-md-block"><img src="assets/images/search-icon.png" alt=""></div>
+                            <div class="basket">
+                                <img src="assets/images/shop-basket.png" alt="">
+                                <span class="cart-items-count text-center">0</span>
+                            </div>
+                            <div class="burger-menu d-block d-xl-none"><i class="fas fa-bars"></i></div>
+                        </div>
+                    </nav>
+                    <div class="mini-cart">
+                        <span class="no-cart-item">No Products In The Basket</span>
+                        <ul class="cart-items">
+
+                        </ul>
+                        <div class="total-price  justify-content-between">
+                            <div class="subtotal">Subtotal:</div>
+                            <div class="total-price-self"><span>$</span><span class="total-price-number">0</span></div>
+                        </div>
+                        <div class="text-center"><a href="cart.html" class="button">View Basket</a></div>
+                        <div class="text-center"><a href="checkout.html" class="button">Checkout</a></div>
+                    </div>
+                    <nav class="mobile-nav d-xl-none">
+                        <ul id="accordion">
+                            <li>
+                                <span class="active-nav">Home</span>
+                                <div class="mn-sub-menu">
+                                    <a href="index.html" class="active-nav">Home</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Pages</span>
+                                <div class="mn-sub-menu">
+                                    <a href="our-clinic.html">Our Clinic</a>
+                                    <a href="contact-us.html">Contact us</a>
+                                    <a href="faq.html">FAQ</a>
+                                    <a href="book-appointment.html">Book an Appointment</a>
+                                    <a href="pricings.html">Pricings</a>
+                                    <a href="schedule.html">Schedule</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span>Doctors</span>
+                                <div class="mn-sub-menu">
+                                    <a href="find-doctor.html">Find A Doctor</a>
+                                    <a href="doctor-single.html">Doctor Single</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span>Departments</span>
+                                <div class="mn-sub-menu">
+                                    <a href="medical-department.html">Medical Department</a>
+                                    <a href="dental-clinic.html">Dental Clinic</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Blog</span>
+                                <div class="mn-sub-menu">
+                                    <a href="post-standard.html">Single Post Standard</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Shop</span>
+                                <div class="mn-sub-menu">
+                                    <a href="sidebar-left.html">Sidebar left</a>
+                                    <a href="cart.html">Cart</a>
+                                    <a href="checkout.html">Checkout</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Elements</span>
+                                <div class="mn-sub-menu">
+                                    <a>Coming Soon</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header ends -->
+
+    <!-- main starts -->
+    <main>
+        <!-- main-frame section starts -->
+        <section class="main-frame-2 no-select" style="background-image: url(assets/images/cart-frame.jpg);">
+            <div class="main-frame-2-title">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <div class="main-frame-2-title-text custom-title-text">
+                                Cart
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="main-frame-2-breadcrumb">
+                                Home / Cart
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- main-frame section ends -->
+
+        <!-- product-table section starts -->
+        <section class="product-table no-select">
+            <div class="container">
+                <form action="" class="pr-form">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="pr-name text-left" colspan="2">Product</th>
+                                <th class="pr-price text-center">Price</th>
+                                <th class="pr-quantity text-center">Quantity</th>
+                                <th class="pr-subtotal text-center">Total</th>
+                                <th class="pr-remove"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    <div class="row cart-buttons">
+                        <div class="col-12 col-xl-8 text-center text-lg-right text-xl-left">
+                            <a href="sidebar-left.html" class="button continue">Continue Shopping</a>
+                            <input type="text" placeholder="ENTER YOUR COUPON" class="coupon">
+                            <div class="button confirm">Confirm</div>
+                        </div>
+                        <div class="col-12 col-xl-4 text-center text-lg-right mt-0 mt-sm-5 mt-xl-0">
+                            <div class="button clear">Clear Cart</div>
+                            <div class="button update">Update Cart</div>
+                            <div class="deliver pt-5">
+                                <div class="container">
+                                    <div class="row  deliver-parametr">
+                                        <div class="col-6 text-left">Subtotal:</div>
+                                        <div class="col-6 text-left"><span>$</span><span class="total-price-num"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row deliver-parametr align-items-center">
+                                        <div class="col-6 text-left">Shipping:</div>
+                                        <div class="col-6 text-left">
+                                            <div><input type="radio" name="shipping" id="" class="mr-2"
+                                                    checked><span>Free
+                                                    Shipping</span></div>
+                                            <div><input type="radio" name="shipping" id="" class="mr-2"><span>Flat
+                                                    rate</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="row deliver-parametr text-left">
+                                        <div class="col-6">Total:</div>
+                                        <div class="col-6 text-left"><span>$</span><span class="total-price-num"></span>
+                                        </div>
+                                    </div>
+                                    <a href="checkout.html" class="button d-block mt-4 text-center">Proceed To
+                                        Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <p class="empty-cart-alert">Your basket is currently empty.</p>
+                <a href="sidebar-left.html" class="return-btn button">Return To Shop</a>
+            </div>
+        </section>
+        <!-- product-table section ends -->
+
+
+    </main>
+    <!-- main ends -->
+
+    <!-- footer starts -->
+    <footer class="footer-2 no-select">
+        <div class="container">
+            <!-- footer-top starts -->
+            <div class="footer-top row">
+                <div class="healthcare col-12 col-lg-4">
+                    <div class="logo">
+                        <a href="#"><img src="assets/images/white-logo.svg" alt=""></a>
+                    </div>
+                    <p class="healthcare-text">With a background in the healthcare software industry and a desire to
+                        build great technology to
+                        help companies succeed in making healthcare better.</p>
+                </div>
+                <div class="about-us col-12 col-lg-2 mt-4 mt-lg-0">
+                    <h5 class="footer-top-col-title">Quick Links</h5>
+                    <ul>
+                        <li class="footer-pass">
+                            <i class="fas fa-arrow-right arrow-right"></i>
+                            <a href="">About Us</a>
+                        </li>
+                        <li class="footer-pass">
+                            <i class="fas fa-arrow-right arrow-right"></i>
+                            <a href="medical-department.html">Departments</a>
+                        </li>
+                        <li class="footer-pass">
+                            <i class="fas fa-arrow-right arrow-right"></i>
+                            <a href="find-doctor.html">Find A Doctor</a>
+                        </li>
+                        <li class="footer-pass">
+                            <i class="fas fa-arrow-right arrow-right"></i>
+                            <a href="faq.html">FAQ</a>
+                        </li>
+                        <li class="footer-pass">
+                            <i class="fas fa-arrow-right arrow-right"></i>
+                            <a href="schedule.html">Timetable</a>
+                        </li>
+                        <li class="footer-pass">
+                            <i class="fas fa-arrow-right arrow-right"></i>
+                            <a href="">News</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact col-12 col-lg-3 mt-4 mt-lg-0">
+                    <h5 class="footer-top-col-title">Contact</h5>
+                    <p class="contact-text">34th Avenue – New York, W2 3XE United State.<br>
+                        info@yourdomain.com<br>
+                        +(123) 1800-88-66</p>
+                    <div class="social-media d-inline-block">
+                        <a href="https://www.facebook.com/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a href="https://dribbble.com/">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="instagram col-12 col-lg-3 mt-4 mt-lg-0">
+                    <h5 class="footer-top-col-title">Instagram</h5>
+                    <div class="container">
+                        <div class="row instagram-contents">
+                            <div class="col-4">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-1.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-2.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-3.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 pt-3  pt-md-5 pt-lg-2">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-4.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+
+                                </div>
+                            </div>
+                            <div class="col-4 pt-3 pt-md-5 pt-lg-2">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-5.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-4 pt-3 pt-md-5 pt-lg-2">
+                                <div class="instagram-content">
+                                    <img src="assets/images/instagram-6.jpg" alt="">
+                                    <div class="overlay d-flex align-items-center justify-content-center"><i
+                                            class="fab fa-instagram insta-icon"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-top ends -->
+
+        <!-- footer-bottom starts -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <span class="col-12 col-lg-6 mt-3 mt-lg-0">© 2019 Spyropress. All Rights Reserved</span>
+                    <div class="col-12 col-lg-6 mt-3 mt-lg-0 text-lg-right"><span>Term & Conditions</span><span
+                            class="policy">Privacy Policy</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom ends -->
+    </footer>
+    <!-- footer ends -->
+
+    <!-- scroll-top button starts -->
+    <div class="st-btn">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <!-- scroll-top button ends -->
+
+
+
+    <!--scripts start-->
+    <!--Animations-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+    <!--jquery-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- local storage -->
+    <script src="js/jquery.shoppingcart.js"></script>
+    <!--Slider Slick Js-->
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <!--bootstrap-->
+    <script src="assets/bootstrap/bootstrap.min.js"></script>
+    <!--javascript-->
+    <script src="js/script.js"></script>
+    <!--scripts end-->
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+// #region find-doctor section
+
+.find-doctor {
+    position: relative;
+
+    .section-left-color {
+        background-color: $color-gray-lighter;
+    }
+
+
+    .find-doctor-left {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-right: 30px;
+
+        .search-doctor-title {
+            font-size: 24px;
+            color: $color-black-lighter;
+            font-weight: $font-weight;
+            margin: 0;
+        }
+
+
+        .search-doctor-content {
+            background-color: $color-white;
+            margin-top: 20px;
+
+            .search-doctor-content-wrapper {
+                padding: 31px 25px 50px;
+
+                label {
+                    display: block;
+                    font-size: 14px;
+                }
+
+                input {
+                    border: none;
+                    padding: 15px 23px;
+                    background-color: $color-gray-lighter;
+                    font-size: $font-size;
+                    width: 100%;
+                    outline: none;
+                    border: 1px solid white;
+                    transition: .3s all linear;
+
+                    &:hover {
+                        background-color: $color-white;
+                        border: 1px solid $main-color;
+                    }
+
+                    &:focus {
+                        background-color: $color-white;
+                        border: 1px solid $main-color;
+                    }
+                }
+
+                .button {
+                    margin-top: 30px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .help-contact {
+            padding: 42px 40px 0;
+            background-position: center;
+            background-size: cover;
+            color: $color-white;
+            margin-top: 60px;
+
+            h3 {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: $font-size;
+                margin-bottom: 35px;
+            }
+
+            .contact-button {
+                background-color: $color-white;
+                color: $color-black;
+                padding: 16px 35px;
+                border-radius: $border-radius;
+                font-weight: $font-weight;
+                cursor: pointer;
+                transition: .3s background-color linear;
+
+                &:hover {
+                    background-color: $main-color;
+                    color: $color-white;
+                }
+            }
+
+            .space {
+                height: 219px;
+            }
+        }
+
+    }
+
+
+    .find-doctor-right {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-left: 30px;
+        background-color: $color-white;
+
+        .associated-doctor-title {
+            font-size: 24px;
+            color: $color-black-lighter;
+            font-weight: $font-weight;
+            padding-bottom: 20px;
+        }
+
+        .associated-description {
+            font-size: $font-size;
+            max-width: 79%;
+            color: $color-gray;
+        }
+
+        .doctor-items {
+            margin-top: 40px;
+
+            .doctor-item {
+                margin-top: 15px;
+                border: 1px solid $color-border;
+            }
+
+
+
+            .doctor-item-wrapper {
+                padding: 10px 10px 7px;
+
+
+
+
+                .doctor-img {
+                    width: 50%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+
+                .doctor-info {
+                    padding: 0 30px 25px;
+
+                    .doctor-name {
+                        padding-top: 9px;
+                        font-size: 18px;
+                        font-weight: $font-weight;
+                    }
+
+                    .doctor-subtitle {
+                        font-size: 14px;
+                        color: $color-dark-light;
+                        padding-top: 9px;
+                    }
+
+                    .doctor-skill {
+                        padding-top: 9px;
+                        font-size: 14px;
+                        font-weight: $font-weight;
+                    }
+
+                    .view-appointment {
+                        padding-top: 30px;
+                        font-size: $font-size;
+                        font-weight: $font-weight;
+                        line-height: 1;
+
+                        .view {
+                            margin-right: 30px;
+                            cursor: pointer;
+                            line-height: .9;
+
+                            a {
+                                display: block;
+                                transition: .3s all linear;
+                            }
+
+                            &:hover {
+
+                                a {
+                                    color: $main-color;
+                                }
+
+                                .line {
+                                    background-color: $main-color;
+                                }
+                            }
+
+                        }
+
+                        .appointment {
+                            line-height: .9;
+                            cursor: pointer;
+
+                            &:hover {
+
+                                a {
+                                    color: $main-color;
+                                }
+
+                                .line {
+                                    background-color: $main-color;
+                                }
+                            }
+                        }
+
+                        .line {
+                            background-color: $color-gray-lighter;
+                            transition: .3s all linear;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .pagination {
+            padding-top: 80px;          
+        }
+
+    }
+}
+// #endregion find-doctor section
+
+// #region appointment-form
+.appointment-form {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    padding: 41px 50px;
+}
+// #endregion appointment-form

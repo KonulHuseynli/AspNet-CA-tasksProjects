@@ -1,0 +1,42 @@
+﻿@using WebApp.ViewModels.Product
+@model ProductIndexVM
+
+        <a class="btn btn-warning" asp-action="create" asp-controller="product">Create</a>
+<table  class="table table-bordered " id="dataTable" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+           @foreach (var product in Model.Products)
+        {
+        
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Title</td>
+            <td>@product.Price</td>
+            <td>@product.Quantity</td>
+            <td>@product.Weight</td>
+            <td>@product.Description</td>
+            <td>@product.CategoryId</td>
+            <td><img style="width:100px;height:100px; border-radius:50%" src="~/assets/images/@product.MainPhotoPath" /><td>
+            <td><form asp-route-id="@product.Id" method="get" asp-action="delete" asp-controller="product">
+                    <input id="id" name="id" value="@product.Id" type="hidden" />
+                    <button type="submit" class="btn btn-danger ">Delete</button>
+                </form>
+                <a class="btn btn-primary " asp-action="update" asp-controller="product" asp-route-id="@product.Id">Update</a>
+            </td>
+        </tr>
+      }
+    </tbody>
+</table>

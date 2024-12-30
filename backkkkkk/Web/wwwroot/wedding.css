@@ -1,0 +1,248 @@
+.WeddingPage {
+    height: 96vh;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+html{
+    scroll-behavior:smooth;
+  }
+  
+.WeddingPage::-webkit-scrollbar{
+    display:none;
+    position: fixed;
+    overflow: scroll;
+}
+.videopart{
+    background-image: url("~/FineJewimages/Bespoke\ Jewellery\ -\ David\ Morris.mp4");
+}
+
+.jeweller {
+    padding: 115px 0 115px;
+    position: relative;
+    z-index: 3;
+    background:#fff;
+}
+.jeweller__container {
+    padding: 0 110px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bridal__list {
+    margin-bottom: 30px;
+}
+.bridal__row:not(:last-child) {
+    margin-bottom: 150px;
+}
+
+.bridal__row:nth-child(2n-1) {
+    flex-direction: row;
+}
+.bridal__row {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.img-container {
+    display: grid;
+    overflow: hidden;
+}
+.bridal__left img {
+    width: 100%;
+}
+
+.img-container img {
+    height: auto;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+.bridal__name {
+    width: 100%;
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-bottom: 32px;
+    color: #0D2A39;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.bridal__text {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 300;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #535353;
+}
+.bridal__btn {
+    text-transform: uppercase;
+}
+
+.bridal__btn {
+    margin-right: auto;
+    color: #0D2A39;
+}
+.line-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+.bridal__left {
+    width: 42%;
+}
+
+
+.bridal__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+.bridal__left2 img {
+    width: 100%;
+
+}    
+.bridal__left2 {
+    width: 42%;
+}
+.bridal__right2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -2200px;
+    width: 40%;
+}
+.jeweller__cites {
+    background: #fff;
+    margin: auto;
+    position: relative;
+    padding: 67px 110px 67px 110px;
+    font-family:'Cinzel';
+
+}
+.jeweller__cite {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.jeweller__cite, .jeweller__cite>p {
+    text-align: center;
+    color:#535353;
+    letter-spacing: 1px;
+}
+.bridal__button {
+    margin-top: 77px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.line-button {
+    color: #0D2A39;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 767px)
+{
+.jeweller {
+    padding-bottom: 0;
+    padding-top: 60px;
+}}
+@media only screen and (max-width: 767px)
+{
+.jeweller__container {
+    padding: 0 15px;
+}}
+@media only screen and (max-width: 767px)
+{
+.bridal__list {
+    margin-bottom: 0;
+    margin-top: 60px;
+    padding-bottom: 50px;
+}}
+
+@media only screen and (max-width: 767px)
+{
+.bridal__row:not(:last-child) {
+    margin-bottom: 60px;
+}}
+
+@media (max-width: 1024px)
+{
+.bridal__row:not(:last-child) {
+    margin-bottom: 80px;
+}
+}
+@media (max-width: 1024px)
+{
+.bridal__row:nth-child(2n) {
+    flex-direction: column;
+}
+}
+@media (max-width: 1024px)
+{
+.bridal__row:nth-child(2n-1) {
+    flex-direction: column;
+}}
+
+
+@media (max-width: 1024px)
+{
+.bridal__right {
+    width: 40%;
+}}
+@media (max-width: 1024px)
+{
+.bridal__right2 {
+    width: 40%;
+    margin-left: 0px;
+
+}}
+@media only screen and (max-width: 767px)
+{
+.bridal__name {
+    margin-bottom: 20px;
+}
+}
+@media only screen and (max-width: 767px)
+{
+.bridal__name {
+    font-size: 16px;
+}}
+@media (max-width: 625px)
+{
+.line-button {
+    font-size: 16px;
+}}
+@media (max-width: 767px)
+{
+.bridal__name:nth-child(2n) {
+    flex-direction: column;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{
+.jeweller__cites {
+    padding: 0 30px;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{
+.jeweller__cite, .jeweller__cite>p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+}}

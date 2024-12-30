@@ -1,0 +1,19 @@
+﻿@using front_to_back.Models
+@model List<RecentWorkComponent>
+
+@{
+    foreach (var recentWorkComponent in Model)
+    {
+        <div class="col-md-4 mb-3">
+            <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                <img class="recent-work-img card-img" src="@recentWorkComponent.FilePath" alt="Card image">
+                <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                    <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                        <h3 class="card-title light-300">@recentWorkComponent.Title</h3>
+                        <p class="card-text">@recentWorkComponent.Text</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+}

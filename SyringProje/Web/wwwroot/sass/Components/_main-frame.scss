@@ -1,0 +1,21 @@
+.main-frame {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    .main-frame-title {
+        padding-top: 251px;
+        padding-bottom: 117px;
+
+        .main-frame-title-text{
+            font-size: 36px;
+            font-weight: $font-weight;
+            color: $color-black-lighter;
+        }
+
+        .main-frame-breadcrumb{
+            color: $color-black-lighter;
+        }
+    }
+}
+

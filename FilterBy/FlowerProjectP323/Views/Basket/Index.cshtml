@@ -1,0 +1,38 @@
+﻿@using FlowerProjectP323.ViewModel.Basket
+@model List<BasketListItemViewModel>
+
+    <div class="mkdf-grid">
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Photo</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Stock Quantity</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var basketProduct in Model)
+        {
+        <tr class="basket-product" data-id="@basketProduct.Id">
+                    <td><img class="img-fluid img-thumbnail" style="height:150px" src="~/assets/img/@basketProduct.PhotoName" /></td>
+            <td>@basketProduct.Title</td>
+            <td>@basketProduct.Price</td>
+            <td>@basketProduct.Quantity</td>
+            <td>@basketProduct.StockQuantity</td>
+            <td>
+                        <button id="deleteButton" class="btn btn-warning" data-id="@basketProduct.Id">Delete</button>
+                </td>
+        </tr>
+
+        }
+  
+    </tbody>
+</table>
+</div>
+
+                    @section Scripts{
+                        <script src="/assets/js/custom.js"></script>
+                    }

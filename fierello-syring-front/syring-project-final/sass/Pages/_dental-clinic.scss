@@ -1,0 +1,458 @@
+// #region main-frame section
+.frame-item {
+    background-color: $color-white;
+    position: relative;
+    max-width: 600px;
+    top: 70px;
+    padding: 30px 50px 63px;
+    display: inline-block;
+    z-index: 1;
+    box-shadow: $box-shadow;
+    border-bottom: 5px solid $main-color;
+
+    .heading {
+        padding-top: 19px;
+    }
+
+    .description {
+        padding-top: 19px;
+        font-weight: $font-weight;
+        font-size: 16px;
+    }
+}
+// #endregion main-frame section
+
+// #region dental-main-section
+.dental-main-section {
+    position: relative;
+
+    .section-right-color {
+        background-color: $color-gray-lighter;
+    }
+
+    // #region section-left
+    .section-left {
+        background-color: $color-white;
+        padding-top: 150px;
+        padding-right: 30px;
+        padding-bottom: 80px;
+
+        .left-main-photo {
+            max-width: 100%;
+            padding-bottom: 100px;
+        }
+
+        .oral-examination {
+            h4 {
+                font-weight: $font-weight;
+            }
+
+            .examination-subtitle {
+                padding-top: 40px;
+                padding-bottom: 20px;
+
+                blockquote {
+                    padding-right: 20px;
+                    color: $main-color;
+                    font-size: 18px;
+                }
+
+                span {
+                    color: $color-black-lighter;
+                    font-weight: $font-weight;
+                    font-size: 15px;
+                }
+
+            }
+
+            .examination-text {
+                p {
+                    font-size: $font-size;
+                    color: $color-gray;
+                }
+
+                .subtitle {
+                    font-weight: $font-weight;
+                    font-size: 18px;
+                }
+
+                .therapy {
+                    padding-left: 30px;
+
+                    li {
+                        list-style: disc !important;
+                        color: $color-gray;
+                    }
+
+                }
+
+
+            }
+
+        }
+
+        .sc-content {
+            padding-top: 40px;
+            padding-bottom: 40px;
+
+            li {
+                padding-bottom: 14px;
+
+                i {
+                    color: $main-color;
+                    font-size: 15px;
+                    padding-right: 15px;
+                }
+
+                span {
+                    font-size: $font-size;
+                }
+            }
+        }
+
+        .treatment-investigation {
+
+            .treatment-title,
+            .investigation-title {
+                padding: 17px 25px;
+                background-color: $color-light-blue;
+                font-weight: $font-weight;
+
+            }
+
+            .treatment-ul,
+            .investigation-ul {
+                padding: 11px 25px;
+                border-left: 1px solid $color-border;
+                border-right: 1px solid $color-border;
+                border-bottom: 1px solid $color-border;
+
+                li {
+                    padding: 12.5px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    border-bottom: 1px solid $color-border;
+                }
+
+                li:last-of-type {
+                    border: none;
+                }
+
+            }
+        }
+
+        .our-gallery {
+            padding-top: 50px;
+
+            img {
+                max-width: 100%;
+            }
+
+            h4 {
+                font-weight: $font-weight;
+                padding-bottom: 20px;
+            }
+
+            .gallery-photo {
+                position: relative;
+
+                .plus-overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: $overlay-color-3;
+                    opacity: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $color-white;
+                    font-size: 35px;
+                    transition: .3s all linear;
+
+                    i {
+                        cursor: pointer;
+                    }
+                }
+
+                &:hover {
+                    .plus-overlay {
+                        opacity: 1;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    // #endregion section-left
+
+    // #region section-right
+    .section-right {
+        padding-left: 30px;
+        padding-bottom: 80px;
+
+
+        h4 {
+            margin: 0;
+            font-weight: $font-weight;
+        }
+
+        .department-ul {
+            padding-top: 50px;
+            li {
+                display: flex;
+                align-items: center;
+                background-color: $color-white;
+                padding: 8px 10px;
+                border-bottom: 1px solid $color-border;
+                font-size: 18px;
+                font-weight: $font-weight;
+                cursor: pointer;
+                transition: .3s all linear;
+                border-right: 5px solid $color-white;
+
+                &:hover{
+                    color: $main-color;
+                    border-right: 5px solid $main-color;
+                }
+
+            }
+
+            .clinic-heart {
+                padding-right: 5px;
+            }
+
+            .clinic-brain {
+                padding-right: 7px;
+            }
+
+            .clinic-bone {
+                padding-right: 5px;
+            }
+
+            .clinic-tooth {
+                position: relative;
+                left: 6px;
+                padding-right: 10px;
+            }
+
+            .clinic-liver {
+                position: relative;
+                left: 6px;
+                padding-right: 10px;
+            }
+
+            .clinic-stomach {
+                position: relative;
+                left: 6px;
+                padding-right: 10px;
+            }
+        }
+
+        .clinic-form {
+            margin-top: 30px;
+            padding: 32px 25px 26px;
+            background-color: $color-white;
+
+            label {
+                display: block;
+                font-size: 14px;
+                font-weight: $font-weight;
+                margin-top: 20px;
+            }
+
+            label:first-of-type {
+                margin: 0 0 8px 0;
+            }
+
+            input,
+            select {
+                border: none;
+                background-color: $color-gray-lighter;
+                padding: 10px 23px;
+                width: 100%;
+                font-weight: $font-weight-bolder;
+                font-size: $font-size;
+                color: $color-gray;
+                outline: none;
+                transition: .3s all linear;
+                border: 1px solid $color-white;
+
+            
+            }
+
+            input{
+                &:hover{
+                    background-color: $color-white;
+                    color: $main-color;
+                    border: 1px solid $main-color;
+                }
+
+                &:focus{
+                    background-color: $color-white;
+                    color: $main-color;
+                    border: 1px solid $main-color;
+                }
+            }
+
+            select {
+                /* for Firefox */
+                -moz-appearance: none;
+                /* for Chrome */
+                -webkit-appearance: none;
+                background: url(../assets/images/down-arrow.svg) no-repeat 90% 6px $color-gray-lighter;
+                background-size: 10px;
+                background-position-y: center;
+                outline: none;
+            }
+
+            .button {
+                padding: 18px 35px;
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+
+
+        .working-time {
+            padding-top: 80px;
+
+            .working-time-ul {
+                margin-top: 30px;
+                padding: 15px 23px 14px;
+                background-color: $color-white;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px 0 14px;
+                    border-bottom: 1px solid $color-border;
+                    font-size: $font-size;
+                }
+
+                li:last-of-type {
+                    border: none;
+                }
+
+                .day {
+                    color: $color-gray;
+                }
+
+                .hour {
+                    color: $color-black-lighter;
+                }
+            }
+        }
+
+        .quick-contact {
+            padding-top: 80px;
+
+            .quick-contact-content {
+                margin-top: 30px;
+                padding: 28px 24px;
+                background-color: $color-white;
+
+                p {
+                    font-weight: $font-weight;
+                    font-size: 14px;
+                    color: $color-black-lighter;
+                }
+
+                span {
+                    font-size: $font-size;
+                    color: $color-gray;
+                }
+            }
+        }
+    }
+    // #endregion section-right
+}
+// #endregion dental-main-section
+
+
+// #region clinic-modal-slider
+.clinic-slider {
+    height: 500px;
+    width: 60%;
+    position: relative;
+    border-top: 10px  solid $color-white-light;
+    border-left: 10px  solid $color-white-light;
+    border-right: 10px  solid $color-white-light;
+    border-bottom: 40px  solid $color-white-light;
+    border-radius: $border-radius;
+    background-color: $color-white;
+
+    .clinic-slider-element {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: .5s all linear;
+    }
+    
+    .clinic-slider-element-1{
+        opacity: 1;
+    }
+    
+    .clinic-slider-element-2,.clinic-slider-element-3{
+        opacity: 0;
+    }
+
+    .left-button{
+        position: absolute;
+        left: 0;
+        top: 45%;
+        width: 25px;
+        height: 25px;
+        background-color: $color-white-light;
+        border-radius:0 $border-radius $border-radius 0;
+        cursor: pointer;
+
+        i{
+            color: $color-gray-darker;
+        }
+    }
+
+    .right-button{
+        position: absolute;
+        right: 0;
+        top: 45%;
+        width: 25px;
+        height: 25px;
+        background-color: $color-white-light;
+        border-radius:  $border-radius 0 0 $border-radius ;
+        cursor: pointer;
+
+        i{
+            color: $color-gray-darker;
+        }
+    }
+
+    .quit{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: $color-gray-lighter;
+        border: 1px solid $color-border;
+        position: absolute;
+        right: 0;
+        bottom: -33px;
+        font-size: 12px;
+        line-height: 25px;
+        cursor: pointer;
+
+        i{
+            color: $color-black-lighter;
+        }
+    }
+}
+
+
+// #endregion clinic-modal-slider

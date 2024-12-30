@@ -1,0 +1,17 @@
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\bin\Debug\net6.0\DataAccess.dll
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\bin\Debug\net6.0\Core.dll
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\bin\Debug\net6.0\Core.pdb
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.dll
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
+C:\Users\Konul\source\repos\DavidMorrisFinalProject\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll

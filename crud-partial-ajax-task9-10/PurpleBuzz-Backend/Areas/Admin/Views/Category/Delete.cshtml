@@ -1,0 +1,24 @@
+﻿@using PurpleBuzz_Backend.Models
+@model Category
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">
+                            Delete Category
+                        </p>
+                        <span>Title:</span>
+                        <span>@Model.Title</span>
+                        <br />
+                        <br />
+                        <form method="post" asp-action="deletecomponent" asp-controller="category" asp-area="admin" asp-route-id="@Model.Id">
+                            <button onclick="confirm('Are you sure?')" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

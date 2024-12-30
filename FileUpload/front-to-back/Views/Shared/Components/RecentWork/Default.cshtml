@@ -1,0 +1,33 @@
+﻿@using front_to_back.ViewModels.Home
+@model HomeIndexViewModel
+<section class="py-5 mb-5">
+    <div class="container">
+        <div class="recent-work-header row text-center pb-5">
+            <h2 class="col-md-6 m-auto h2 semi-bold-600 py-5">Recent Works</h2>
+        </div>
+        <div id="recentWorkComponents" class="row gy-5 g-lg-5 mb-4">
+
+            <!-- Start Recent Work -->
+            @{
+                foreach (var recentWorkComponent in Model.RecentWorkComponents)
+                {
+                    <div class="col-md-4 mb-3">
+                        <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                            <img class="recent-work-img card-img" src="@recentWorkComponent.FilePath" alt="Card image">
+                            <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                                <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                    <h3 class="card-title light-300">@recentWorkComponent.Title</h3>
+                                    <p class="card-text">@recentWorkComponent.Text</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+
+        <div>
+            <button id="loadmore" class="d-flex jusitfy content center">Learn more...</button>
+        </div>
+    </div>
+</section>

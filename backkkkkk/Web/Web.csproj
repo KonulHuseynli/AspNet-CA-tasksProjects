@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\ViewModels\MissDaisy\" />
+    <Folder Include="Areas\Admin\ViewModels\DiscoverDavidMorris\" />
+    <Folder Include="Areas\Admin\ViewModels\WeddingAnimation\" />
+    <Folder Include="Areas\Admin\Views\DiscoverDavidMorris\" />
+    <Folder Include="Areas\Admin\Views\MissDaisy\" />
+    <Folder Include="Areas\Admin\Views\FJCategory\" />
+    <Folder Include="Areas\Admin\Views\HJCategory\" />
+    <Folder Include="Areas\Admin\Views\HJProduct\" />
+    <Folder Include="wwwroot\assets2\images\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+﻿@using Web.Areas.Admin.ViewModels.HomeSlider
+@model HomeSliderUpdateVM   
+
+<form enctype="multipart/form-data" asp-action="update" asp-controller="homeslider" method="post">
+
+    <div class="form-group">
+        <label asp-for="Title">Title</label>
+        <input class="form-control" asp-for="Title">
+        <span asp-validation-for="Title"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MainPhoto">MainPhoto</label>
+        <input class="form-control" asp-for="MainPhoto">
+        <span asp-validation-for="MainPhoto"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a class="btn btn-danger" asp-action="index" asp-controller="homeslider">Cancel</a>
+</form>

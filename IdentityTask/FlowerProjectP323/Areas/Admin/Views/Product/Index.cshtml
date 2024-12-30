@@ -1,0 +1,60 @@
+﻿@using FlowerProjectP323.ViewModels
+@model ProductIndexViewModel
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Products</h4>
+                        <a class="btn btn-primary" asp-action="create" asp-controller="product" asp-area="admin">CREATE Product</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Price</th>
+                                        <th>Description</th>
+                                        <th>Quantity</th>
+                                        <th>Weight</th>
+                                        <th>Dimenesion</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var product in Model.Products)
+                                    {
+                                        <tr>
+                                            <td>@product.Id</td>
+                                            <td>@product.Name</td>
+                                            <td>@product.Price</td>
+                                            <td>@product.Description</td>
+                                            <td>@product.Quantity</td>
+                                            <td>@product.Weight</td>
+                                            <td>@product.Dimenesion</td>
+                                            <td>@product.Category</td>
+                                            <td>@product.Status</td>
+                                            
+                                  <td><img src="~/assets/img/@product.MainPhotoName"></td>
+                                            <td>
+                                                <a class="btn btn-primary" asp-action="update" asp-controller="product" asp-area="admin" asp-route-id="@product.Id">Update</a>
+                                                <a class="btn btn-danger" asp-action="delete" asp-controller="product" asp-area="admin" asp-route-id="@product.Id">Delete</a>
+                                                <a class="btn btn-info" asp-action="details" asp-controller="product" asp-area="admin" asp-route-id="@product.Id">Details</a>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

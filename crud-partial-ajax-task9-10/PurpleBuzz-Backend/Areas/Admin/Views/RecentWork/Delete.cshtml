@@ -1,0 +1,34 @@
+﻿@using PurpleBuzz_Backend.Models
+@model RecentWorkComponent
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">
+                            Delete Recent Work
+                        </p>
+                        <span>Title:</span>
+                        <span>@Model.Title</span> 
+
+                        <br />
+                        <br />
+                        <span>Text:</span>
+                        <span>@Model.Text</span>
+
+                        <br />
+                        <br />
+
+                        <span>File path</span>
+                        <span>@Model.FilePath</span>
+
+                        <form method="post" asp-action="deletecomponent" asp-controller="recentwork" asp-area="admin" asp-route-id="@Model.Id">
+                            <button onclick="confirm('Əminsiz mi?')" class="btn btn-danger">Silin</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+﻿@using Web.ViewModels.Basket
+@model BasketIndexVM
+
+
+
+
+<section class="h-100" style="background-color: #eee;">
+    <div class="container h-100 py-5">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-10">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="fw-normal mb-0 text-black">Basket Cart</h3>
+
+                </div>
+                @if (Model.BasketProducts.Count > 0)
+                {
+                    @foreach (var basketProduct in Model.BasketProducts)
+                    {
+                        <div class="card rounded-3 mb-4 basketProduct" id=@basketProduct.Id>
+                            <div class="card-body p-4">
+                                <div class="row d-flex justify-content-between align-items-center">
+                                    <div class="col-md-2 col-lg-2 col-xl-2">
+                                        <img src="~/assets/img/@basketProduct.PhotoName"
+                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                    </div>
+
+                                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                        <button data-id="@basketProduct.Id" id="downcount" class="btn btn-link px-2"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+
+                                        <input id="form1" min="1" name="quantity" value="@basketProduct.Quantity" type="number"
+                                       class="form-control form-control-sm" />
+
+                                        <button data-id="@basketProduct.Id" id="upcount" class="btn btn-link px-2"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                        <h5 class="mb-0">$@basketProduct.Price</h5>
+                                    </div>
+                                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                        <button id="deleteButton" data-id="@basketProduct.Id" data-quantity="@basketProduct.Quantity" class="text-danger"><i class="fas fa-trash fa-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="empty-cart-alert" style="">Your basket is currently empty.</p>
+                }
+
+
+            </div>
+        </div>
+    </div>
+
+    <section class="product-table no-select">
+        <div class="container">
+            <form asp-action="clear" asp-controller="basket" class="pr-form" style="display: block;">
+                <div class="row cart-buttons">
+                    <div class="col-12 col-xl-8 text-center text-lg-right text-xl-left">
+                        <a asp-action="index" asp-controller="shop" class="button continue">Continue Shopping</a>
+
+                    </div>
+                    <div class="col-12 col-xl-4 text-center text-lg-right mt-0 mt-sm-5 mt-xl-0">
+
+                        <button class="button clear">Clear Cart</button>
+
+
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+    </section>
+</section>

@@ -1,0 +1,43 @@
+// #region about section
+.about {
+    padding: 82px 0 84px;
+    position: relative;
+
+
+    .about-content {
+        padding-top: 40px;
+        font-size: 18px;
+        font-weight: $font-weight;
+    }
+
+    .signature {
+        padding-top: 45px;
+
+        img{
+            max-width: 230px;
+        }
+    }
+
+    .about-images {
+        position: relative;
+
+        .about-image {
+            position: absolute;
+            box-shadow: $box-shadow;
+            width: 275px;
+        }
+
+        .about-image-1 {
+            top: 90px;
+            z-index: 1;
+        }
+
+        .about-image-2 {
+            left: 230px;
+            top: 50px;
+        }
+    }
+
+}
+
+// #endregion about section

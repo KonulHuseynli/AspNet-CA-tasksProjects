@@ -1,0 +1,81 @@
+﻿@using Task_1010.ViewModels.Department;
+@model DepartmentIndexViewModel;
+
+<!-- main starts -->
+    <main>
+        <!-- main-frame section starts -->
+        <section class="main-frame-2 no-select" style="background-image: url(~~assets/images/medical-department.jpg);">
+            <div class="container">
+                <div class="row main-frame-2-title align-items-center">
+                    <div class="col-md-6 main-frame-2-title-text">Medical Department</div>
+                    <div class="col-md-6 text-md-right main-frame-2-title-breadcrumb">Home / Medical Department</div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </section>
+        <!-- main-frame section ends -->
+
+        <!-- item section starts -->
+        <section class="items no-select">
+            <div class="container">
+                <div class="row items-section-title align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="heading" data-aos="fade-up" data-aos-duration="2000">
+                            Expert physician and caring clinical staff provide you with an <span
+                                class="defaultcolor">exceptional patient care.</span>
+                        </h2>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="description" data-aos="fade-up" data-aos-duration="2000">
+                            Syring Medical Center provide patients with choices to ask for the conducting and analyzing
+                            of several lab tests on-site at no cost for prioritized patients or at 70% for people with
+                            an insurance. Additional testing can be ordered off site; those costs are the responsibility
+                            of the enquirers.
+                        </p>
+                    </div>
+                </div>
+                <div class="row items-content" data-aos="fade-up" data-aos-duration="2000">
+
+                    @{
+                        foreach (var item in Model.DepartmentComponents)
+                    {
+                            <div class="col-lg-4">
+                            <div class="md-item">
+                                <div class="md-item-icon">
+                                    <img src=@item.FilePath alt="">
+                                </div>
+                                <div class="title">
+                                    @item.Title
+                                </div>
+                                @Html.Raw(item.Text)
+                            </div>
+                        </div>
+                    }
+                    }
+                            </div>
+                        </div>
+                    </section>
+                    <!-- item section ends -->
+                    <!-- book-appoinment section starts -->
+                    <section class="book-appoinment no-select">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-sm-12 col-lg-7">
+                                    <div class="appoinment-text" data-aos="fade-up" data-aos-duration="1500">
+                                        Contact to book your appointment!
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-lg-5 text-lg-right pt-4 pt-lg-0">
+                                    <a href="book-appointment.html" class="appoinment-button" data-aos="fade-up" data-aos-duration="1500">
+                                        Book An Appoinment
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- book-appoinment section ends -->
+                </main>
+                <!-- main ends -->
+               
+               
+

@@ -1,0 +1,56 @@
+.form-self{
+
+    h4{
+        font-weight: $font-weight;
+        padding-bottom: 20px;
+    }
+
+    .form-desc{
+        color: $color-gray;
+        font-size: $font-size;
+        padding-bottom: 30px;
+    }
+
+    label{
+        display: block;
+        font-size: 14px;
+        font-weight: $font-weight;
+    }
+    
+    .form-input{
+        padding: 20px;
+        border: none;
+        background-color: $color-gray-lighter;
+        width: 100%;
+        font-size: 14px;
+        font-weight: $font-weight-bolder;
+        margin-bottom: 20px;
+        outline: none;
+        transition: .5s all linear;
+        border: 1px solid white;
+
+        &:hover{
+            background-color: white;
+            border: 1px solid $main-color;
+        }
+
+        &:focus{
+            background-color: white;
+            border: 1px solid $main-color;
+        }
+    }
+
+    .button{
+        width: 100%;
+        padding: 17px;
+        text-align: center;
+    }
+    
+    
+    
+    .form-alert{
+        font-size: 14px;
+        padding-top: 15px;
+        color: $color-dark-light;
+    }
+}

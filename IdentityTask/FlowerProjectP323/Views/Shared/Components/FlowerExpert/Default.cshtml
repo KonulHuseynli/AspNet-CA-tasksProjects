@@ -1,0 +1,37 @@
+﻿@using FlowerProjectP323.Models
+@model List<FlowerExpert>
+
+<div class="mkdf-row-grid-section-wrapper ">
+	<div class="mkdf-row-grid-section">
+		<div class="vc_row wpb_row vc_inner vc_row-fluid">
+			@foreach (var flowerExpert in Model)
+			{
+
+				<div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-3 vc_col-md-6">
+					<div class="vc_column-inner">
+						<div class="wpb_wrapper">
+							<div class="mkdf-team-holder mkdf-team-info-below-image">
+								<div class="mkdf-team-inner">
+									<div class="mkdf-team-image">
+										@Html.Raw(flowerExpert.PhotoName)
+									</div>
+									<div class="mkdf-team-info">
+										<h6 class="mkdf-team-name">
+											@flowerExpert.FullName
+										</h6>
+										<span class="mkdf-team-position">@flowerExpert.Profession</span>
+									</div>
+								</div>
+							</div>
+							<div class="vc_empty_space"
+							 style="height: 68px">
+								<span class="vc_empty_space_inner"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			}
+
+		</div>
+	</div>
+</div>

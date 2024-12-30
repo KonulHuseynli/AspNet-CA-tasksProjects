@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>            
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./homepage.css">
+    <link rel="stylesheet" href="./general.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <script src="./script.js" defer></script> 
+    <link class="favicon" rel="icon" type="image/x-icon" href="./assets/logoDavm.png">
+    <title>David Morris - London Jeweller</title >
+  </head>
+<body>
+    <section class="HomePage">
+  <nav class="navigation">
+        <div class="nav__container">
+            <div class="nav_left">
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i  class="fa fa-bars"></i>
+              </a>
+                <ul class="nav_menu" id="menu-links">
+                    <li><a href="./highjeweller/highjeweller.html">HIGH JEWELLERY</a></li>
+                    <li><a href="./finejeweller/finejeweller.html">FINE JEWELLERY</a></li>
+                    <li><a href="./wedding/wedding.html">WEDDING</a></li>
+                    <li><a href="./bespoke/bespoke.html">BESPOKE</a></li>
+                </ul>
+            </div>
+            <a href="./homepage.html" class="nav_logo">
+              <div class="nav_logo">
+                <img src="./assets/firstpart/LogoDavidMorris.png">
+              </div>
+            </a>
+            <div class="nav_right">
+                <ul class="nav_menu">
+                    <li><a href="#">
+                        THE HOUSE OF
+                        <br>                
+                        DAVID MORRIS
+                    </a></li>
+                </ul>
+                <div class="search-box">
+                    <button class="btn-search"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.4255 22.7344L17.7693 16.125C19.2693 14.3906 20.113 12.1875 20.113 9.75C20.113 4.40625 15.7068 0 10.363 0C4.97241 0 0.659912 4.40625 0.659912 9.75C0.659912 15.1406 5.01929 19.5 10.363 19.5C12.7537 19.5 14.9568 18.6562 16.6912 17.1562L23.3005 23.8125C23.488 23.9531 23.6755 24 23.9099 24C24.0974 24 24.2849 23.9531 24.4255 23.8125C24.7068 23.5312 24.7068 23.0156 24.4255 22.7344ZM10.4099 18C5.81616 18 2.15991 14.2969 2.15991 9.75C2.15991 5.20312 5.81616 1.5 10.4099 1.5C14.9568 1.5 18.6599 5.20312 18.6599 9.75C18.6599 14.3438 14.9568 18 10.4099 18Z" fill="#0D2A39"></path>
+                        </svg></button>
+                    <input type="text" class="input-search" placeholder="Type to Search...">
+                  </div>
+                  <a class="nav_like"><svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.7831 3.5L13.3456 2.98438C14.8925 1.4375 17.0956 0.734375 19.205 1.10938C22.4393 1.625 24.83 4.4375 24.83 7.71875V7.95312C24.83 9.92188 23.9862 11.7969 22.58 13.1094L14.0956 21.0312C13.7675 21.3594 13.2987 21.5 12.83 21.5C12.3143 21.5 11.8456 21.3594 11.5175 21.0312L3.03308 13.1094C1.62683 11.7969 0.829956 9.92188 0.829956 7.95312V7.71875C0.829956 4.4375 3.17371 1.625 6.40808 1.10938C8.51746 0.734375 10.7206 1.4375 12.2675 2.98438L12.7831 3.5ZM12.7831 5.65625L11.1893 4.01562C10.0175 2.84375 8.32996 2.28125 6.64246 2.5625C4.15808 2.98438 2.28308 5.14062 2.28308 7.71875V7.95312C2.28308 9.5 2.93933 10.9531 4.06433 11.9844L12.5487 19.9062C12.5956 20 12.6893 20 12.7831 20C12.9237 20 13.0175 20 13.0643 19.9062L21.5487 11.9844C22.6737 10.9531 23.33 9.5 23.33 7.95312V7.71875C23.33 5.14062 21.455 2.98438 18.9706 2.5625C17.2831 2.28125 15.5956 2.84375 14.4237 4.01562L12.7831 5.65625Z" fill="#0D2A39"></path>
+                    </svg></i></a>
+
+                  <a href="./shop/shop.html" class="nav_card"><svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 6V4.5C6 2.01562 7.96875 0 10.5 0C12.9844 0 15 2.01562 15 4.5V6H18.75C19.9688 6 21 7.03125 21 8.25V19.5C21 21.9844 18.9844 24 16.5 24H4.5C1.96875 24 0 21.9844 0 19.5V8.25C0 7.03125 0.984375 6 2.25 6H6ZM7.5 6H13.5V4.5C13.5 2.85938 12.1406 1.5 10.5 1.5C8.8125 1.5 7.5 2.85938 7.5 4.5V6ZM2.25 7.5C1.82812 7.5 1.5 7.875 1.5 8.25V19.5C1.5 21.1875 2.8125 22.5 4.5 22.5H16.5C18.1406 22.5 19.5 21.1875 19.5 19.5V8.25C19.5 7.875 19.125 7.5 18.75 7.5H15V11.25C15 11.6719 14.625 12 14.25 12C13.8281 12 13.5 11.6719 13.5 11.25V7.5H7.5V11.25C7.5 11.6719 7.125 12 6.75 12C6.32812 12 6 11.6719 6 11.25V7.5H2.25Z" fill="#0D2A39"></path>
+                    </svg></i></a>
+            </div>
+        </div>
+  </nav> 
+    <div class="videopart">
+    <iframe  src="https://player.vimeo.com/video/770682384?h=0a14c3149c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="part2">
+            <div class="missdaisy">
+                <h2>Miss Daisy</h2>
+                <p>Timeless femininity designed to transcend generations</p>
+                <a class="first_a button-2 " href="#">VIEW COLLECTIONS</a>
+                <div class="daisy_slide">
+                    <div class="daisy_list swiper-wrapper ">
+                        <div class="daisy__item swiper-slide   ">
+                        <h3>EARRINGS</h3>
+                        <img src="./assets/firstpart/EARRINGS.png">
+                        <a class="button-2 ">SHOP NOW</a>
+                        </div>
+                        <div class="daisy__item swiper-slide  ">
+                            <h3>NECKLACES</h3>
+                            <img src="./assets/firstpart/neck.png">
+                            <a class="button-2 ">SHOP NOW</a>
+                        </div>
+                        <div class="daisy__item swiper-slide  ">
+                            <h3>RINGS</h3>
+                            <img src="./assets/firstpart/ring.png">
+                            <a class="button-2 ">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+    <div class="part3">
+        <div class="farfetch">
+            <div class="farfetch_head">
+                <div class="farfetch_left">
+                    <h2 class="farfetch_title">Christmas Gift Guide</h2>
+                    <p class="farfetch_text">Perfect-gift inspiration awaits… shop the fine jewellery collections online now, from London with love. </p>
+                </div>
+                <a class="farfetch__button button-1">View Collection</a>
+            </div>
+            <div class="farfetch_list">
+            <div class="farfetch__item img-container">
+                <img loading="lazy" class="img-parralax" src="./assets/firstpart/farfetchimg1.png" width="1098" height="1460" alt="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">            </div>
+            <div class="farfetch__item img-container">
+                <img loading="lazy" class="img-parralax" src="./assets/firstpart/farfetchimg2.png" width="1098" height="1460" alt="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">            </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="finejewellery">
+  <div class="finejewellery_info">
+    <div class="finejewellery_content">
+        <h2 class="finejewellery__title">Fine Jewellery</h2>
+        <p class="finejewellery__text">Elegant yet playful, and at once timeless and of-the-moment. Our fine jewellery collections combine the creative design ‘twist’ that has become the David Morris signature with the finest gemstones, pearls and precious metals.<br>
+        Discover the beautiful collections online and at our boutiques worldwide.<br>
+        <br>
+        </p>
+    </div>
+</div>
+<div class="finejewellery_slider  finejewellery_slider_pointer ">
+    <div class="slider_images">
+<div><img src="./assets/finejeweller/img1.png">
+    <p>FORTUNA  </p>
+</div>         
+<div><img src="./assets/finejeweller/img2d.png">
+    <p>ASIYAH</p>
+</div>
+<div><img src="./assets/finejeweller/img3.png">
+    <p>ASTRA</p>
+</div>
+<div><img src="./assets/finejeweller/img4f.png">
+    <p>BERRY</p>
+</div>
+<div><img src="./assets/finejeweller/img5.png">
+    <p>ILLUSION</p>
+</div>
+<div><img src="./assets/finejeweller/img6.png">
+    <p>MISS DAISY</p>
+</div>
+<div> <img src="./assets/finejeweller/img7.png">
+    <p>ROSE CUT</p>
+</div>
+        
+        </div>
+    <!-- <div class="previous_button">
+        <a href="#">
+            <span class="glyphicon glyphicon-menu-left"></span>
+          </a>
+</div>
+    <div class="next_button">
+        <a href="#">
+            <span class="glyphicon glyphicon-menu-right"></span>
+        </a>
+    </div> -->
+</div>
+        
+    </div>
+
+    <div class="discover">
+            <h2 class="discover_title">DISCOVER DAVID MORRIS</h2>
+            <div class="discover_list">
+                <a  href="./highjeweller/highjeweller.html" class="discover_item">
+                    <div class="discover-img_container">
+                        <img loading="lazy" class="img-parralax" src="./assets/discover/disscoverimg1.png" width="1270" height="928" alt="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 84.906px);">
+                    </div>
+                    <p class="discover_text">High Jewellery</p>
+                </a>
+                <a href="./finejeweller/finejeweller.html" class="discover_item">
+                    <div class="discover-img_container">
+                        <img loading="lazy" class="img-parralax" src="./assets/discover/discoverimg2.png" width="1270" height="928" alt="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 84.906px);">                    </div>
+                    <p class="discover_text">Fine Jewellery</p>
+                </a>
+                <a href="./wedding/wedding.html" class="discover_item">
+                    <div class="discover-img_container">
+                        <img loading="lazy" class="img-parralax" src="./assets/discover/discoverimg3.png" width="1270" height="928" alt="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 84.906px);">                    </div>
+                    <p class="discover_text">Wedding Jewellery</p>
+                </a>
+                <a href="./bespoke/bespoke.html" class="discover_item">
+                    <div class="discover-img_container">
+                        <img loading="lazy" class="img-parralax" src="./assets/discover/discoverimg4.png" width="1270" height="928" alt="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 84.906px);">                    </div>
+                    <p class="discover_text">Bespoke Jewellery</p>
+                </a>
+            </div>
+    </div>
+
+    <div class="followus">
+            <div class="follow_head">
+                <h2 class="follow__title">Follow Us</h2>
+                <div class="follow__social">
+                    <a href="#" target="_blank">
+                    <img width="29" height="29" viewBox="0 0 29 29" fill="none" src="./assets/follow/icons8-instagram.svg">
+                   
+                    </a>
+                    <a href="#" target="_blank">
+                    <img width="32" height="32" viewBox="0 0 32 32" fill="none" src="./assets/follow/icons8-facebook.svg">
+                    </a>
+                    <a href="#" target="_blank">
+                    <img src="./assets/follow/icons8-linkedin-2.svg" x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" width="30" height="36" fill="#0D2A39">
+                    </a>
+                </div>
+
+            </div>
+            <div class="follow_list">
+                <div class="follow_img_container">
+
+                    <div class="container">
+                        <img src="./assets/follow/img1follow.png">                        
+                        <div class="middle">
+                            <div class="text">PINK DIAMOND</div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <img src="./assets/follow/followimg2.png">
+                        <div class="middle">
+                            <div class="text">FORTUNA</div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <img src="./assets/follow/foloowimg3.png">
+                        <div class="middle">
+                            <div class="text">LUMINOUS</div>
+                        </div>
+                    </div>
+                      <div class="container">
+                          <img src="./assets/follow/followimg4.png">
+                        <div class="middle">
+                          <div class="text">DIAMOND</div>
+                        </div>
+                      </div>
+                      <!-- <div class="container">
+                        <img src="./assets/follow/followimg4.png">
+                      <div class="middle">
+                        <div class="text">DIAMOND</div>
+                      </div>
+                    </div>
+                    <div class="container">
+                        <img src="./assets/follow/followimg4.png">
+                      <div class="middle">
+                        <div class="text">DIAMOND</div>
+                      </div>
+                    </div>
+                    <div class="container">
+                        <img src="./assets/follow/followimg4.png">
+                      <div class="middle">
+                        <div class="text">DIAMOND</div>
+                      </div>
+                    </div>
+                    <div class="container">
+                        <img src="./assets/follow/followimg4.png">
+                      <div class="middle">
+                        <div class="text">DIAMOND</div>
+                      </div>
+                    </div>
+                    <div class="container">
+                        <img src="./assets/follow/followimg4.png">
+                      <div class="middle">
+                        <div class="text">DIAMOND</div>
+                      </div>
+                    </div>
+                    <div class="container">
+                        <img src="./assets/follow/followimg4.png">
+                      <div class="middle">
+                        <div class="text">DIAMOND</div>
+                      </div>
+                    </div> -->
+                    <!-- <label class="btn-area" for="btnBox">
+                        <span class="btn1">LOAD MORE</span> 
+                        <span class="btn2">LOAD LESS</span>
+                    </label> -->
+
+                </div>
+
+            </div>
+    </div>
+        <!-- <div class="footer">
+            <div class="footer_container">
+                <div class="footer__item footer__short">
+                    <img src="./assets/footer/footerimg.png" class="footer__payment">
+                    <div class="footer__address">
+                    <p>DAVID MORRIS INTERNATIONAL</p>
+                    <p>180 NEW BOND STREET</p>
+                    <p>LONDON</p>
+                    <p>W1S 4RL</p>
+                    <p>UNITED KINGDOM</p>
+                    </div>
+                   </div>
+                <div class="footer__item footer__forms">
+                    <h2 class="footer__title footer__form--title">Join the world of David Morris</h2>
+                    <p class="footer__text">Be the first to receive invitations to our events, hear about new collections and services</p>
+                    <form class="footer__form js_subscribe_form">
+                        <input type="email" name="email" required="" placeholder="Your Email Address" >
+                        <button type="submit" class="footer__button button-1" >Sign up</button>
+                    </form>
+                <p class="footer__text">By submitting this form, you are agreeing to David Morris’ Anti-spam Policy &amp; Terms of Use.</p>
+                    </div>
+                <div class="footer__item footer__shop">
+                        <h2 class="footer__title">SHOP</h2>
+                        <a href="#" class="footer__link">High Jewellery</a>
+                        <a href="#" class="footer__link">Fine Jewellery</a>
+                        <a href="#" class="footer__link">Wedding</a>
+                        <a href="#" class="footer__link">Bespoke</a>
+                        <a href="#" class="footer__link">Our boutiques</a>
+                    </div>
+                <div class="footer__item footer__about">
+                            <h2 class="footer__title">ABOUT US</h2>
+                            <a href="h#" class="footer__link">Heritage</a>
+                            <a href="#" class="footer__link">Delivery &amp; Returns</a>
+                            <a href="#" class="footer__link">Contact us</a>
+                    </div>
+                <div class="footer__item footer__menu">
+                                <a href="" class="footer__link">Fine Jewellery</a>
+                                <a href="" class="footer__link">High Jewellery</a>
+                                <a href="" class="footer__link">Our boutiques</a>
+                                <a href="" class="footer__link">Delivery &amp; Returns</a>
+                                <a href="" class="footer__link">Contact us</a>
+                    </div>
+                <div class="footer__item footer__social">
+                                    <h2 class="footer__title">SOCIAL</h2>
+                                    <a href="#" target="_blank" class="footer__link">
+                                    <span>INSTAGRAM</span>
+                                    </a>
+                                    <a href="#" target="_blank" class="footer__link">
+                                    <span>FACEBOOK</span>
+                                    </a>
+                                    <a href="#" target="_blank" class="footer__link">
+                                    <span>LINKEDIN</span>
+                                    </a>
+                    </div>
+                    <p class="footer__copyright">© 2022 David Morris. Website by <a href="https://www.imaginaire.co.uk" target="_blank">Imaginaire</a>.</p>        </div>
+                </div> -->
+                <footer>
+                    <div class="main-content">
+                      <div class="left box">
+                        <h2>About us</h2>
+                        <div class="content">
+                          <p>If you would like to organise a personal consultation or a video appointment, or require any other assistance please fill out the form below and we’ll be in touch to confirm your appointment and answer your queries..</p>
+                          <div class="social">
+                            <a href=""><img src="./assets/facebook.svg" alt=""></a>
+                            <a href="#"><img src="./assets/twitter.svg"></a>
+                            <a href=""><img src="./assets/instagram.svg"></a>
+                            <a href=""><img src="./assets/youtube.svg"></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="center box">
+                        <h2>Address</h2>
+                        <div class="content">
+                          <div class="place">
+                            <img src="./assets/map.svg">
+                            <span class="text">DAVID MORRIS INTERNATIONAL~ 180 NEW BOND STREET</span>
+                              <br>
+                           <span  class="text">LONDON ,W1S 4RL,UNITED KINGDOM</span> 
+                          </div>
+                          <div class="phone">
+                            <img src="./assets/telephone.svg">
+                            <span class="text">+089-765432100</span>
+                          </div>
+                          <div class="email">
+                            <img src="./assets/envelope.svg">
+                            <span class="text">abc@example.com</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right box">
+                        <h2>Contact us</h2>
+                        <div class="content">
+                          <form action="#">
+                            <div class="email">
+                              <div class="text">Email *</div>
+                              <input type="email" required>
+                            </div>
+                            <div class="msg">
+                              <div class="text">Message *</div>
+                              <textarea rows="2" cols="25" required></textarea>
+                            </div>
+                            <div class="btn">
+                              <button type="submit">Send</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div>
+                        <span class="credit">Created By <a href="https://www.codingnepalweb.com">DAVID MORRIS</a> | </span>
+                        <span class="far fa-copyright"></span><span> © 2023 DAVID MORRIS. WEBSITE BY IMAGINAIRE..</span>
+                    </div>
+                  </footer>
+
+
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" ></script>
+<script type="text/javascript">
+        $('.slider_images ').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3
+        });
+
+
+</script>
+</body>
+</html>

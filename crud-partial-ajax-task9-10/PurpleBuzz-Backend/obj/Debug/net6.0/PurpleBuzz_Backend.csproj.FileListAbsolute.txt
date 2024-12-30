@@ -1,0 +1,8 @@
+C:\Users\Konul\Asp.Net-CRUD-1\PurpleBuzz-Backend\obj\Debug\net6.0\PurpleBuzz_Backend.csproj.AssemblyReference.cache
+C:\Users\Konul\Asp.Net-CRUD-1\PurpleBuzz-Backend\obj\Debug\net6.0\PurpleBuzz_Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Konul\Asp.Net-CRUD-1\PurpleBuzz-Backend\obj\Debug\net6.0\PurpleBuzz_Backend.AssemblyInfoInputs.cache
+C:\Users\Konul\Asp.Net-CRUD-1\PurpleBuzz-Backend\obj\Debug\net6.0\PurpleBuzz_Backend.AssemblyInfo.cs
+C:\Users\Konul\Asp.Net-CRUD-1\PurpleBuzz-Backend\obj\Debug\net6.0\PurpleBuzz_Backend.csproj.CoreCompileInputs.cache
+C:\Users\Konul\Asp.Net-CRUD-1\PurpleBuzz-Backend\obj\Debug\net6.0\PurpleBuzz_Backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Konul\Asp.Net-CRUD-1\PurpleBuzz-Backend\obj\Debug\net6.0\PurpleBuzz_Backend.RazorAssemblyInfo.cache
+C:\Users\Konul\Asp.Net-CRUD-1\PurpleBuzz-Backend\obj\Debug\net6.0\PurpleBuzz_Backend.RazorAssemblyInfo.cs

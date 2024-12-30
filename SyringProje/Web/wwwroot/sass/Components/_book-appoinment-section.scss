@@ -1,0 +1,26 @@
+// book-appoinment section starts
+.book-appoinment{
+    background-color: $main-color;
+    padding: 39px 0;
+
+    .appoinment-text{
+        font-size: 36px;
+        color: $color-white;
+    }
+
+    .appoinment-button{
+        display: inline-block;
+        background-color: white;
+        border-radius: $border-radius;
+        transition-property: opacity,transform,background-color !important;
+        padding: 16px 36px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $color-black-lighter;
+            color: $color-white !important;
+        }
+    }
+}
+
+// book-appoinment section ends

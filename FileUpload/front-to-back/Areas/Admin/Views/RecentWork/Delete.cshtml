@@ -1,0 +1,35 @@
+﻿@using front_to_back.Models
+@model RecentWorkComponent
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+             <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  
+                  <p class="card-description">
+                    Delete work component
+                  </p>
+
+                  <span>@Model.Title</span>
+
+                  <br>
+                    </br>   
+                  <span>@Model.Text</span>
+                  <br>
+                    </br>
+                  <span>@Model.FilePath</span>
+                 
+                  <form method="post" asp-action="deletecomponent" asp-controller="recentwork" asp-area="admin" asp-route-id="@Model.Id">
+                      <button onclick="confirm('Are you sure')" class="btn btn-danger">
+                          Yes
+                      </button>
+
+                  </form>
+
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

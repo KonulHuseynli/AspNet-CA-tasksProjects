@@ -1,0 +1,46 @@
+//#region colors
+$main-color: #007DF2;
+$color-gray-darker: #3F3F3F;
+$color-gray:  #777777;
+$color-white: #FFF;
+$color-dark-gray: rgb(48, 48, 48);
+$color-dark-light: #888;
+$color-border: #e1e1e1;
+$color-gray-lighter: #f5f5f5;
+$color-grey-lighter: #D4D3D3;
+$color-footer: #3e3e3e;
+$color-footer-2: #222222;
+$color-footer-3: #111111;
+$box-shadow-color: #0000003b;
+$overlay-color: rgba(0, 0, 0, 0.6);
+$overlay-color-2: rgba(0, 0, 0, 0.3);
+$overlay-color-3: rgba(0, 125, 242, 0.6);
+$color-black: #000000;
+$color-lighter: #eee;
+$color-twitter:  #1da1f2;
+$color-light-blue: #E5F2FE;
+$color-green: #42924B;
+$color-black-lighter: #303030;
+$color-gray-light: #999999;
+$color-white-light:#F8F8F8;
+$color-today: #FCF8E3;
+$color-twit-news: #737373;
+$color-grey: #9E9EAB ;
+// #endregion colors
+
+// #region fonts
+$main-font: 'Poppins', sans-serif;
+// #endregion fonts
+
+
+// #region sizes
+$font-size: 14px;
+$font-weight:600;
+$font-weight-bolder: 500;
+$header-bottom-line-height:101px;
+$border-radius: 5px;
+// #endregion sizes
+
+// #region box-shadow
+$box-shadow:0px 0px 9px 0px $box-shadow-color;
+// #endregion box-shadow

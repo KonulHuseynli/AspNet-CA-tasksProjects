@@ -1,0 +1,65 @@
+﻿@using Web.ViewModels.Account
+@model AccountLoginVM
+
+
+@{
+
+    var returnUrl = Context.Request.Query["returnUrl"];
+}
+<body style="background-image: url(https://davidmorris.com/app/uploads/2022/10/Bespoke-Jewellery-1024x631.png);">
+
+
+
+<main>
+    <!-- main-frame section starts -->
+    <section class="main-frame-2 no-select" >
+        <div class="main-frame-2-title">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <div class="main-frame-2-title-text custom-title-text">
+                            Login
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="main-frame-2-breadcrumb">
+                            Home / Login
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- main-frame section ends -->
+    <!-- product-table section starts -->
+    <section class="login my-5 no-select">
+        <div class="container">
+            <form  class="login-form" method="post" asp-action="login" asp-controller="account">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input asp-for="ReturnUrl" type="hidden" value="@returnUrl" />
+                <div class="form-group">
+                    <label asp-for="Username"></label>
+                    <input class="form-control" asp-for="Username" />
+                    <span asp-validation-for="Username"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input class="form-control" asp-for="Password" />
+                    <span asp-validation-for="Password"></span>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                    <div>
+                        <span>Don't have account yet?</span> <a asp-action="register" asp-controller="account">Register now</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- product-table section ends -->
+
+
+</main>
+</body>

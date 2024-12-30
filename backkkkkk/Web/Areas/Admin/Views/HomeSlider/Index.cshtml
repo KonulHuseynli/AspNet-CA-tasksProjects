@@ -1,0 +1,37 @@
+﻿@using Web.Areas.Admin.ViewModels.HomeSlider
+@model HomeSliderIndexVM    
+
+<a class="btn btn-primary" asp-action="create" asp-controller="homeslider">Create</a>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">CreateAt</th>
+            <th scope="col">ModifiedAt</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var homeSlider in Model.homeSliders)
+        {
+            <tr>
+                <td>@homeSlider.Id</td>
+                <td>@homeSlider.Title</td>
+                <td>@homeSlider.CreatedAt.ToShortDateString()</td>
+                <td>@homeSlider.ModifiedAt.ToShortDateString()</td>
+                <td><img class="img-thumbnail" style="width:50px ; height:50px; object-fit:cover" src="~/assets2/images/@homeSlider.PhotoName" /></td>
+
+                <td>
+                    <a class="btn btn-primary" asp-action="update" asp-controller="homeslider" asp-route-id="@homeSlider.Id">Update</a>
+                    <form method="post" asp-action="delete" asp-controller="homeslider" asp-route-id="@homeSlider.Id">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

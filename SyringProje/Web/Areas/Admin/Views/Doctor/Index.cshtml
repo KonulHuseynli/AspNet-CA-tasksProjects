@@ -1,0 +1,38 @@
+﻿@using WebApp.ViewModels.Doctor
+@model DoctorIndexVM
+
+<a class="btn btn-warning" asp-action="create" asp-controller="doctor">Create</a>
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">FullName</th>
+            <th scope="col">Description</th>
+            <th scope="col">Qualification</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var doctor in Model.Doctors)
+        {
+
+            <tr>
+                <td>@doctor.Id</td>
+                <td>@doctor.FullName</td>
+                <td>@doctor.Description</td>
+                <td>@doctor.Qualification</td>
+                <td><img style="width:100px;height:100px; border-radius:50%" src="~/assets/images/@doctor.Photo" />
+                <td>
+                <td>
+                    <form asp-route-id="@doctor.Id" method="get" asp-action="delete" asp-controller="doctor">
+                        <input id="id" name="id" value="@doctor.Id" type="hidden" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                    <a class="btn btn-primary" asp-action="update" asp-controller="doctor" asp-route-id="@doctor.Id">Update</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

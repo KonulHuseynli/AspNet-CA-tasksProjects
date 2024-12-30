@@ -1,0 +1,38 @@
+﻿@using Core.Constants
+@using Web.Areas.Admin.ViewModels.FineJewellerAnimation
+@model FineJewellerAnimationUpdateVM
+
+<form enctype="multipart/form-data" asp-action="update" asp-controller="finejewelleranimation" method="post">
+
+    <label asp-for="Title"></label>
+    <input asp-for="Title" />
+    <span asp-validation-for="Title"></span>
+
+    <div class="form-group">
+        <label asp-for="MainPhoto">MainPhoto</label>
+        <input class="form-control" asp-for="MainPhoto">
+        <span asp-validation-for="MainPhoto"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a class="btn btn-danger" asp-action="index" asp-controller="finejewelleranimation">Cancel</a>
+
+</form>
+
+
+
+@section Scripts{
+
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#Description'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+}

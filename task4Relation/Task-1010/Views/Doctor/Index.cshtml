@@ -1,0 +1,96 @@
+﻿@using Task_1010.ViewModels.Doctor;
+@model DoctorIndexViewModel;
+
+<!-- main starts -->
+<main>
+
+    <!-- main-frame section starts -->
+    <section class="main-frame-2 no-select" style="background-image: url(~assets/images/doctor-page-title.jpg);">
+        <div class="container">
+            <div class="row main-frame-2-title align-items-center">
+                <div class="col-md-6 main-frame-2-title-text">Find A Doctor</div>
+                <div class="col-md-6 text-md-right main-frame-2-title-breadcrumb">Home / Find A Doctor</div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+    <!-- main-frame section ends -->
+    <!-- find-doctor section starts -->
+    <section class="find-doctor no-select">
+        <div class="section-left-color"></div>
+        <div class="section-right-color"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-4 find-doctor-left">
+                    <div class="search-doctor">
+                        <p class="search-doctor-title">
+                            Find the Doctor
+                        </p>
+                        <span class="line"></span>
+                        <div class="search-doctor-content">
+                            <div class="search-doctor-content-wrapper">
+                                <label for="">Doctor Name</label>
+                                <input type="search" placeholder="Enter doctor name" class="search-doctor-input">
+                                <div class="button search-button text-center">Search Now</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="help-contact text-center"
+                         style="background-image: url(~assets/images/contact-us.jpg)">
+                        <h3>Have a Question?</h3>
+                        <p>Our client care managers are on call 24/7 to answer your questions</p>
+                        <div class="contact-button d-inline-block">Contact Us</div>
+                        <div class="space"></div>
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-lg-8 find-doctor-right">
+                    <p class="associated-doctor-title">
+                        Associated Doctors in Syring.
+                    </p>
+                    <p class="associated-description">
+                        Expert physician specialists and caring clinical staff provide you with an exceptional
+                        patient care is what sets Syring Medical Center apaert health care experience.
+                    </p>
+                    <div class="doctor-items">
+                    @{
+                        foreach (var item in Model.DoctorProfilesComponents)
+                        {
+                                <div class="doctor-item">
+                                    <div class="doctor-item-wrapper d-flex">
+                                        <div class="doctor-img">
+                                            <img src=@item.FilePath alt="">
+                                        </div>
+                                        <div class="doctor-info">
+                                            <div class="doctor-name">@item.Name</div>
+                                           @Html.Raw(item.Description)
+                                            <div class="view-appointment d-flex">
+                                                <div class="view">
+                                                    <a href="doctor-single.html">View Profile</a>
+                                                    <span class="line"></span>
+                                                </div>
+                                                <div class="appointment">
+                                                    <p>Appointment</p>
+                                                    <span class="line"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                    }
+                            </div>
+                        <div class="pagination d-flex">
+                            <div class="pagination-element pagination-active">1</div>
+                            <div class="pagination-element">2</div>
+                            <div class="pagination-element">></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- find-doctor section ends -->
+
+</main>
+<!-- main ends -->

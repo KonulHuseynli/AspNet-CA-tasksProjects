@@ -1,0 +1,43 @@
+﻿@using Core.Entities
+@using Web.Areas.Admin.ViewModels.HomeAnimation
+@model HomeAnimationIndexVM
+
+@if (Model.HomeAnimation == null)
+{
+    <a class="btn btn-primary" asp-action="create" asp-controller="homeanimation">Create</a>
+}
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">CoverImage</th>
+            <th scope="col">VideoUrl</th>
+            <th scope="col">Created at</th>
+            <th scope="col">Modified at</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.HomeAnimation != null)
+        {
+            <tr>
+                <td>@Model.HomeAnimation.Id</td>
+                <td><img class="img-thumbnail" style="width:50px ; height:50px; object-fit:cover" src="~/assets2/images/@Model.HomeAnimation.CoverImg" /></td>
+                <td>@Model.HomeAnimation.VideoUrl</td>
+                <td>@Model.HomeAnimation.CreatedAt.ToShortDateString()</td>
+                <td>@Model.HomeAnimation.ModifiedAt.ToShortDateString()</td>
+                <td>
+                    <a class="btn btn-primary" asp-action="update" asp-controller="homeanimation" asp-route-id="@Model.HomeAnimation.Id">Update</a>
+                    <form method="post" asp-action="delete" asp-controller="homeanimation" asp-route-id="@Model.HomeAnimation.Id">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>

@@ -1,0 +1,84 @@
+// #region doctor-timetable section 
+.doctor-timetable {
+    padding: 133px 0;
+
+    .timetable-title {
+        font-size: 24px;
+        font-weight: $font-weight;
+    }
+
+    .timetable-select {
+        border: none;
+        padding: 13px 100px 13px 31px;
+        background: url(../assets/images/down-arrow.svg) no-repeat 90% 6px $color-gray-lighter;
+        background-size: 13px;
+        background-position-y: center;
+        /* for Firefox */
+        -moz-appearance: none;
+        /* for Chrome */
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+     
+    }
+
+    .timetable-bottom {
+        padding-top: 50px;
+
+        thead {
+            th {
+                font-size: 16px;
+                padding: 16px 5px;
+                border: 1px solid $color-border;
+                font-weight: $font-weight-bolder;
+                color: $color-white;
+                background-color: $color-black-lighter;
+            }
+
+            th:nth-of-type(1) {
+                background-color: $color-white;
+            }
+
+
+        }
+
+        tbody {
+
+            th {
+                background-color: $color-gray-lighter;
+                font-size: 16px;
+                font-weight: $font-weight-bolder;
+                line-height: 80px;
+            }
+
+            td{
+                transition: .3s background-color linear;
+
+                .doctor-name {
+                    font-size: 15px;
+                    font-weight: $font-weight;
+                    margin: 10px 0 5px 0;
+                    color: $color-black-lighter;
+                    transition: .3s all linear;
+                    cursor: pointer;
+                    padding-top: 10px;
+
+                    &:hover{
+                        color: $main-color;
+                    }
+                }
+
+                .speciality{
+                    font-size: $font-size;
+                    margin-bottom: 10px;
+                    color: $color-gray;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+// #endregion doctor-timetable section

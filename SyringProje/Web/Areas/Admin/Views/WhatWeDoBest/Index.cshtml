@@ -1,0 +1,36 @@
+﻿@using WebApp.ViewModels.WhatWeDoBest
+@model WhatWeDoBestIndexVM
+
+<a class="btn btn-warning" asp-action="create" asp-controller="WhatWeDoBest">Create</a>
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Photo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var weDoBest in Model.WhatWeDoBests)
+        {
+
+            <tr>
+                <td>@weDoBest.Id</td>
+                <td>@weDoBest.Title</td>
+                <td>@weDoBest.Description</td>
+
+                <td><img style="width:70px;height:70px; border-radius:40%" src="~/assets/images/@weDoBest.Photo" />
+                <td>
+                <td>
+                    <form asp-route-id="@weDoBest.Id" method="get" asp-action="delete" asp-controller="WhatWeDoBest">
+                        <input id="id" name="id" value="@weDoBest.Id" type="hidden" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                    <a class="btn btn-primary" asp-action="update" asp-controller="WhatWeDoBest" asp-route-id="@weDoBest.Id">Update</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

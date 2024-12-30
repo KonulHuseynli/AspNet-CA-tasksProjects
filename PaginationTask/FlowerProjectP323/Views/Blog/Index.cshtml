@@ -1,0 +1,129 @@
+﻿@using FlowerProjectP323.ViewModel.Blog;
+@model BlogIndexViewModel
+
+<div class="mkdf-content">
+    <div class="mkdf-content-inner">
+        <div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-title-content-va-middle"
+             style="height: 225px;background-color: #fafaf9" data-height="225">
+            <div class="mkdf-title-wrapper" style="height: 225px">
+                <div class="mkdf-title-inner">
+                    <div class="mkdf-grid">
+                        <h1 class="mkdf-page-title entry-title">Blog Masonry</h1>
+                        <span class="mkdf-page-subtitle">Where flowers are our inspiration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mkdf-container">
+            <div class="mkdf-container-inner clearfix">
+                <div class="mkdf-grid-row mkdf-grid-huge-gutter">
+                    <div class="mkdf-page-content-holder mkdf-grid-col-12">
+                        <div class="mkdf-blog-holder mkdf-blog-masonry mkdf-blog-pagination-standard mkdf-masonry-images-fixed mkdf-blog-type-masonry mkdf-blog-three-columns mkdf-large-space mkdf-blog-masonry-in-grid"
+                             data-blog-type=masonry data-next-page=2 data-max-num-pages=3 data-post-number=11
+                             data-excerpt-length=13>
+                            <div class="mkdf-blog-holder-inner mkdf-outer-space">
+                                <div class="mkdf-blog-masonry-grid-sizer"></div>
+                                <div class="mkdf-blog-masonry-grid-gutter"></div>
+                                @foreach (var blog in Model.Blogs)
+                                {
+                                    <article id="post-814" class="mkdf-post-has-media mkdf-item-space post-814 post type-post status-publish format-standard has-post-thumbnail hentry category-greens tag-bouquets tag-rose" style="position: absolute; left: 0%; top: 0px;">
+                                        <div class="mkdf-post-content">
+                                            <div class="mkdf-post-heading">
+                                                <div class="mkdf-post-image">
+                                                    <a itemprop="url" asp-action="details" asp-controller="blog" asp-route-id="@blog.Id" title="@blog.Title">
+                                                        <img width="1300" height="830" src="~/assets//img/@blog.PhotoName" class="attachment-full size-full wp-post-image" alt="aa" loading="eager" srcset="~/assets//img/@blog.PhotoName 1300w, ~/assets//img/@blog.PhotoName 300w, ~/assets//img/@blog.PhotoName 768w,~/assets//img/@blog.PhotoName 1024w, ~/assets//img/@blog.PhotoName 800w, ~/assets//img/@blog.PhotoName 225w, ~/assets//img/@blog.PhotoName 75w" sizes="(max-width: 1300px) 100vw, 1300px">
+                                                    </a>
+                                                </div>
+                                                <div itemprop="dateCreated" class="mkdf-post-info-date entry-date published updated">
+                                                    <a itemprop="url" href="../2018/05/index.html">
+                                                        @blog.CreateDate.ToString("dd/MM/yyyy")
+                                                    </a>
+                                                    <meta itemprop="interactionCount" content="UserComments: 0">
+                                                </div>
+                                            </div>
+                                            <div class="mkdf-post-text">
+                                                <div class="mkdf-post-text-inner">
+                                                    <div class="mkdf-post-text-main">
+                                                        <h5 itemprop="name" class="entry-title mkdf-post-title">
+                                                            <a itemprop="url" href="../say-you-care/index.html" title="@blog.Title">
+                                                                @blog.Title
+                                                            </a>
+                                                        </h5>
+                                                        <div class="mkdf-post-excerpt-holder">
+                                                            <p itemprop="description" class="mkdf-post-excerpt">
+                                                                @Html.Raw(blog.Description )
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                }
+
+                            </div>
+                            <div class="mkdf-blog-pagination">
+                                <ul>
+
+                                    @if (Model.Page > 1)
+                                    {
+                                        <li class="mkdf-pag-prev">
+
+
+                                            @{
+                                                var prevPage = @Model.Page - 1;
+
+                                                <a itemprop="url" asp-action="index" asp-controller="blog" asp-route-page="@prevPage">
+                                                    <span class="mkdf-icon-linear-icons lnr lnr-chevron-left"></span>
+                                                </a>
+
+                                            }
+                                        </li>
+
+                                    }
+
+
+
+                                    @for (int i = 1; i <= Model.PageCount; i++)
+                                    {
+
+
+                                        <li class="mkdf-pag-number">
+                                            <a asp-action="index" asp-controller="blog" asp-route-page="@i" class="@(Model.Page==i ? "mkdf-pag-active disabled" : "mkdf-pag-inactive")">@i</a>
+                                        </li>
+
+                                    }
+
+                                    @if (Model.PageCount != Model.Page)
+                                    {
+                                        <li class="mkdf-pag-next">
+                                            @{
+                                                var nextPage = @Model.Page + 1;
+
+
+                                                <a itemprop="url" asp-action="index" asp-controller="blog" asp-route-page="@nextPage">
+                                                    <span class="mkdf-icon-linear-icons lnr lnr-chevron-right"></span>
+                                                </a>
+
+                                            }
+                                        </li>
+
+
+                                    }
+
+                                </ul>
+                            </div>
+                            <div class="mkdf-blog-pagination-wp">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mkdf-content-bottom">
+            <div class="mkdf-content-bottom-inner mkdf-full-width">
+                <div class="widget widget_mkdf_instagram_widget"></div>
+            </div>
+        </div>
+    </div>
+</div>

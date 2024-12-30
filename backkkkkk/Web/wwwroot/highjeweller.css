@@ -1,0 +1,124 @@
+.HighjewellerPage {
+    height: 100vh;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior:smooth;
+  }
+  
+.HighjewellerPage::-webkit-scrollbar{
+    display:none;
+    position: fixed;
+    overflow: scroll;
+}
+.slider_images{
+    margin-left: 350px;
+}
+.finejewellery_info{
+    padding-left: 30px;
+    width: 22%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 45px;
+    margin-top: 10px;
+    position: absolute;
+  }
+.high {
+    position: relative;
+    z-index: 3;
+    background: #fff;
+    padding: 0px;
+}
+.high__container {
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.high__list {
+    margin-top: 0px;
+}
+.high__row:nth-child(2n-1) {
+    flex-direction: row;
+}
+
+.high__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+}
+.high__row:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+.high__left {
+    width: 50%;
+    background: #fff;
+}
+
+.img-container {
+    display: grid;
+    overflow: hidden;
+}
+.high__left img {
+    width: 100%;
+    max-height: 776px;
+    object-fit: cover;
+}
+
+.img-container img {
+    height: auto;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.high__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 150px;
+}
+.bridal__name {
+    width: 100%;
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-bottom: 32px;
+    color:#0D2A39;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.bridal__text {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 300;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#535353;
+}
+.bridal__btn {
+    text-transform: uppercase;
+}
+
+.bridal__btn {
+    margin-right: auto;
+    color: #0D2A39;
+}
+.bridal__text p {
+    max-width: 70%;
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}

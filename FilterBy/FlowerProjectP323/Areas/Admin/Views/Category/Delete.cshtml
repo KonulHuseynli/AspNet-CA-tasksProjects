@@ -1,0 +1,31 @@
+﻿@using FlowerProjectP323.Models
+@model Category
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Delete Category
+                        </p>
+
+                        <span>TITLE:</span>
+                        <span>@Model.Title</span>
+
+                        <br />
+                        <br />
+
+                        <form method="post" asp-action="deletecomponent" asp-controller="category" asp-area="admin" asp-route-id="@Model.Id">
+                            <button style="background-image: linear-gradient(to left top, #eb0b1c, #b31723, #7c1c22, #461a1c, #121111);" onclick="confirm('Are You Sure?')" class="btn btn-danger">DELETE</button>
+                            <button style="border:none" >
+                                <a  style="background-image: linear-gradient(to left top, #0bebc4, #75a865, #73693a, #4c3629, #121111);" class="btn btn-light" asp-action="index" asp-controller="category" asp-area="admin">Cancel</a>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

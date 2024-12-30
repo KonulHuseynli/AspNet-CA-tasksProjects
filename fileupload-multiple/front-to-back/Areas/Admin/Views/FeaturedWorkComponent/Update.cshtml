@@ -1,0 +1,99 @@
+﻿@using front_to_back.Areas.Admin.ViewModels.FeaturedWorkComponent
+@model FeaturedWorkComponentUpdateViewModel
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Update featured work component
+                        </p>
+                        <form enctype="multipart/form-data" method="post" asp-action="update" asp-controller="featuredworkcomponent" asp-area="admin" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="Title"></label>
+                                <input class="form-control" asp-for="Title">
+                                <span asp-validation-for="Title"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description"></label>
+                                <textarea class="form-control" asp-for="Description"></textarea>
+                                <span asp-validation-for="Description"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Photos"></label>
+                                <input class="form-select" asp-for="Photos">
+
+                                @{
+                                    if (Html.ViewData.ModelState["Photos"] != null)
+                                    {
+                                        foreach (var error in Html.ViewData.ModelState["Photos"].Errors)
+                                        {
+                                            <li>@error.ErrorMessage</li>
+                                        }
+                                    }
+
+                                }
+
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <a class="btn btn-danger" asp-action="index" asp-controller="featuredworkcomponent" asp-area="admin"> Cancel</a>
+                        </form>
+
+                        <br>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Photo</th>
+                                        <th>Order</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var photo in Model.FeaturedWorkComponentPhotos)
+                                    {
+                                        <tr>
+                                            <td>@photo.Id</td>
+                                            <td><img src="~/assets/img/@photo.Name"></td>
+                                            <td>@photo.Order</td>
+                                            <td  >
+                                                <a class="btn btn-primary" asp-action="updatephoto" asp-controller="featuredworkcomponent" asp-area="admin" asp-route-id="@photo.Id">
+                                                Update
+                                            </a>
+                                            
+                                            <a class="btn btn-danger" asp-action="deletephoto" onclick="confirm('Are you sure?')" asp-controller="featuredworkcomponent" asp-area="admin" asp-route-id="@photo.Id">
+                                                Delete
+                                            </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#Description'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+}
+

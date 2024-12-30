@@ -1,0 +1,61 @@
+﻿
+@using WebApp.ViewModels.HomeMainSlider
+@model HomeMainSliderIndexVM
+<a class="btn btn-warning" asp-action="create" asp-controller="homemainslider">Create</a>
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Home Main Slider</h4>
+                        @if (Model.HomeMainSliders != null)
+                        {
+                        
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Title</th>
+                                            <th>Description</th>
+                                            <th>SubPhoto</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach(var slider in Model.HomeMainSliders){
+                                        <tr>
+                                                <td>@slider.Id</td>
+                                                <td>@slider.Title</td>
+                                                <td>@Html.Raw(slider.Description)</td>
+                                                <td><img style="width:70px;height:70px; border-radius:40%" src="~/assets/images/@slider.SubPhotoName" /></td>
+
+
+                                            <td>
+
+                                                    <a class="btn btn-primary " asp-action="update" asp-controller="homemainslider" asp-area="admin" asp-route-id=@slider.Id>Update</a>
+                                                    <a class="btn btn-primary btn-danger " onclick="confirm('eminsinizmi?')" asp-action="delete" asp-controller="homemainslider" asp-area="admin" asp-route-id=@slider.Id>Delete</a>
+                                                   
+                                            </td>
+                                        </tr>
+
+
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        else
+                        {
+                            <a class="btn btn-primary" asp-action="create" asp-controller="homemainslider" asp-area="admin">CREATE HomeMain Slider!</a>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

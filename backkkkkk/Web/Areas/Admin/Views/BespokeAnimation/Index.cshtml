@@ -1,0 +1,43 @@
+﻿@using Core.Entities
+@using Web.Areas.Admin.ViewModels.BespokeAnimation
+@model BespokeAnimationIndexVM
+
+@if (Model.BespokeAnimation == null)
+{
+    <a class="btn btn-primary" asp-action="create" asp-controller="bespokeAnimation">Create</a>
+}
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">CoverImage</th>
+            <th scope="col">VideoUrl</th>
+            <th scope="col">Created at</th>
+            <th scope="col">Modified at</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.BespokeAnimation != null)
+        {
+            <tr>
+                <td>@Model.BespokeAnimation.Id</td>
+                <td><img class="img-thumbnail" style="width:50px ; height:50px; object-fit:cover" src="~/assets2/images/@Model.BespokeAnimation.CoverImg" /></td>
+                <td>@Model.BespokeAnimation.VideoUrl</td>
+                <td>@Model.BespokeAnimation.CreatedAt.ToShortDateString()</td>
+                <td>@Model.BespokeAnimation.ModifiedAt.ToShortDateString()</td>
+                <td>
+                    <a class="btn btn-primary" asp-action="update" asp-controller="bespokeAnimation" asp-route-id="@Model.BespokeAnimation.Id">Update</a>
+                    <form method="post" asp-action="delete" asp-controller="bespokeAnimation" asp-route-id="@Model.BespokeAnimation.Id">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>

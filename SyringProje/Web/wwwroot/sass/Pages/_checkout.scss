@@ -1,0 +1,129 @@
+// #region checkout section
+.checkout {
+    padding: 90px 0;
+
+    .checkout-content {
+
+        .checkout-alert{
+            display: none;
+        }
+        
+        .checkout-content-top {
+            padding: 21px 60px;
+            background-color: $main-color;
+
+            h5 {
+                font-weight: $font-weight;
+                color: $color-white;
+                margin: 0;
+            }
+
+            .return-cart{
+                transition: .3s all linear;
+                &:hover{
+                    color: $color-gray-lighter;
+                }
+            }
+        }
+
+        .checkout-content-bottom {
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+            padding: 50px 68px;
+
+            h5 {
+                font-weight: $font-weight;
+                margin-bottom: 40px;
+            }
+
+            input[type=text],
+            input[type=email],
+            input[type=tel],
+            input[type=number],
+            select,
+            textarea {
+                padding: 20px;
+                font-size: $font-size;
+                color: $color-black-lighter;
+                width: 100%;
+                outline: none;
+                appearance: none;
+                margin-bottom: 25px;
+                border: 1px solid $color-border;
+            }
+
+            select {
+                background: url(../assets/images/down-arrow.svg) no-repeat 96% 6px #FFF;
+                background-size: 10px;
+                background-position-y: center;
+                font-weight: $font-weight-bolder;
+
+            }
+
+            textarea {
+                font-style: italic;
+                font-size: 12px;
+                transition: .3s all linear;
+
+                &:hover {
+                    background-color: $color-white;
+                    border: 1px solid $main-color;
+                }
+
+                &:focus {
+                    background-color: $color-white;
+                    border: 1px solid $main-color;
+                }
+            }
+
+            input[type=text],
+            input[type=email],
+            input[type=tel],
+            input[type=number] {
+                font-style: italic;
+                font-size: 12px;
+                font-weight: $font-weight;
+                transition: .3s linear;
+
+                &:hover {
+                    background-color: $color-white;
+                    border: 1px solid $main-color;
+                }
+
+                &:focus {
+                    background-color: $color-white;
+                    border: 1px solid $main-color;
+                }
+            }
+
+            .pro-table{
+                width: 100%;
+                text-align: center;
+                th,td{
+                    border: 1px solid $color-border;
+                    padding: 10px;
+                    color: $color-gray;
+                    font-weight: $font-weight;
+                }
+            }
+
+            .p-method{
+                color: $color-gray;
+                font-size: 13px;
+                padding-left: 10px;
+                font-weight: $font-weight;
+            }
+
+            .place-order{
+                background-color: $color-black-lighter;
+                transition: .3s all linear;
+
+                &:hover{
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+
+// #endregion checkout section

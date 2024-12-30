@@ -1,0 +1,36 @@
+﻿@using PurpleBuzz_Backend.Models
+@model ContactIntroComponent
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">
+                            Update contact intro component
+                        </p>
+                        <form method="post" asp-action="update" asp-controller="contactintro" asp-area="admin">
+                            <div class="form-group">
+                                <label asp-for="Title">Title</label>
+                                <input class="form-control" asp-for="Title">
+                                <span class="text-danger" asp-validation-for="Title"></span>
+
+                                <br />
+                                <label asp-for="Description">Text</label>
+                                <input class="form-control" asp-for="Description">
+                                <span class="text-danger" asp-validation-for="Description"></span>
+
+                                <br />
+
+                                <label asp-for="FilePath">FilePath</label>
+                                <input class="form-control" asp-for="FilePath">
+                                <span class="text-danger" asp-validation-for="FilePath"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

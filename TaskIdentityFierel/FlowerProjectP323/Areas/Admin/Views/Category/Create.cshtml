@@ -1,0 +1,30 @@
+﻿@using FlowerProjectP323.Models
+@model Category
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Create category
+                        </p>
+                        <form method="post" asp-action="create" asp-controller="category" asp-area="admin" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="Title">Title</label>
+                                <input class="form-control" asp-for="Title">
+                                <span asp-validation-for="Title"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <button>
+                                <a class="btn btn-light" asp-action="index" asp-controller="category" asp-area="admin">Cancel</a>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

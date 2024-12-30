@@ -1,0 +1,497 @@
+﻿@using Task_1010.ViewModels.Product;
+@model ProductIndexViewModel;
+
+<!-- main starts -->
+<main>
+    <!-- main-frame section starts -->
+    <section class="main-frame no-select" style="background-image: url(../../wwwroot/assets/images/shop-page-title.jpg);">
+        <div class="main-frame-title">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <div class="main-frame-title-text">
+                            Shop
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="main-frame-breadcrumb">
+                            Home / Products
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- main-frame section ends -->
+    <!-- products section starts -->
+    <section class="products no-select">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="left-sidebar">
+                        <div class="search">
+                            <h4>Search</h4>
+                            <div class="search-product">
+                                <input type="search" name="" id="" placeholder="Search products"
+                                       class="search-product-input">
+                                <img src="assets/images/search-product-icon.png" alt="" class="search-product-icon">
+                            </div>
+
+                        </div>
+                        <div class="categories">
+                            <h4>Product categories</h4>
+                            <ul>
+                                @{
+                                    foreach (var categories in Model.Product)
+                                    {
+                                        bool isDoesntRepeat = true;
+                                        if (isDoesntRepeat)
+                                        {
+                                            <li class="category" data-target="@categories.Title.Split(' ')[0].ToLower()">@categories.Title </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="category" data-target="@categories.Title.Split(' ')[0].ToLower()">@categories.Title </li>
+                                        }
+                                        isDoesntRepeat = false;
+                                    }
+                                }
+                            </ul>
+                        </div>
+
+                        <div class="top-rated-products">
+                            <h4>Top rated products</h4>
+                            <ul>
+                                <li class="single-product d-flex align-items-center">
+                                    <div>
+                                        <img src="assets/images/product-single1.jpg" alt="" class="product-photo">
+                                    </div>
+                                    <div>
+                                        <span class="product-title">Family First Aid Kit</span>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-price">$39.99</span>
+                                    </div>
+                                </li>
+                                <li class="single-product d-flex align-items-center">
+                                    <div>
+                                        <img src="~assets/images/product-single2.jpg" alt="" class="product-photo">
+                                    </div>
+                                    <div>
+                                        <span class="product-title">Syring Polime Oxygen Mask</span>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-price">$17.99</span>
+                                    </div>
+                                </li>
+                                <li class="single-product d-flex align-items-center">
+                                    <div>
+                                        <img src="~assets/images/product-single-3.jpg" alt="" class="product-photo">
+                                    </div>
+                                    <div>
+                                        <span class="product-title">Blue Stethoscope</span>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="product-price">$39.99</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-tags">
+                            <h4>Product Tags</h4>
+                            <div class="tags">
+                                <span>aid</span>
+                                <span>cancer</span>
+                                <span>doctors</span>
+                                <span>emergecy</span>
+                                <span>healthy</span>
+                                <span>medical</span>
+                                <span>sickness</span>
+                                <span>tips</span>
+                            </div>
+                        </div>
+                        <div class="instagram pt-4">
+                            <h5 class="footer-top-col-title pb-4">Instagram</h5>
+                            <div class="container">
+                                <div class="row instagram-contents">
+                                    <div class="col-4">
+                                        <div class="instagram-content">
+                                            <img src="~assets/images/instagram-1.jpg" alt="">
+                                            <div class="overlay d-flex align-items-center justify-content-center">
+                                                <i class="fab fa-instagram insta-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="instagram-content">
+                                            <img src="~assets/images/instagram-2.jpg" alt="">
+                                            <div class="overlay d-flex align-items-center justify-content-center">
+                                                <i class="fab fa-instagram insta-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="instagram-content">
+                                            <img src="~assets/images/instagram-3.jpg" alt="">
+                                            <div class="overlay d-flex align-items-center justify-content-center">
+                                                <i class="fab fa-instagram insta-icon"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-4 pt-3  pt-md-5 pt-lg-2">
+                                        <div class="instagram-content">
+                                            <img src="~assets/images/instagram-4.jpg" alt="">
+                                            <div class="overlay d-flex align-items-center justify-content-center">
+                                                <i class="fab fa-instagram insta-icon"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-4 pt-3 pt-md-5 pt-lg-2">
+                                        <div class="instagram-content">
+                                            <img src="~assets/images/instagram-5.jpg" alt="">
+                                            <div class="overlay d-flex align-items-center justify-content-center">
+                                                <i class="fab fa-instagram insta-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 pt-3 pt-md-5 pt-lg-2">
+                                        <div class="instagram-content">
+                                            <img src="~assets/images/instagram-6.jpg" alt="">
+                                            <div class="overlay d-flex align-items-center justify-content-center">
+                                                <i class="fab fa-instagram insta-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 products-side ">
+                    <div class="row ">
+                        @{
+                            foreach (var product in Model.Product)
+                            {
+                                foreach (var productComponent in product.ProductComponents)
+                                {
+                                    <div class="col-lg-4 col-md-6 pb-5 component @product.Title.Split(' ')[0].ToLower()">
+                                        <div class="productt ">
+                                            <div class="product-image"
+                                         style="background-image: url(@productComponent.FilePath);">
+                                                <div class="basket-wishlist-compare d-flex justify-content-center">
+                                                    <div class="add-basket text-center">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </div>
+                                                    <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                                    <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                                </div>
+                                            </div>
+                                            <div class="product-inf">
+                                                <h5 class="productt-name">@productComponent.Title</h5>
+                                                @Html.Raw(productComponent.Text)
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        }
+                       
+                        <div class="pagination d-flex justify-content-center">
+                            <div class="pagination-element pagination-active">1</div>
+                            <div class="pagination-element">2</div>
+                            <div class="pagination-element">></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- products section ends -->
+</main>
+<!-- main ends -->
+
+
+@* <div class="col-lg-4 col-md-6 pb-5 component baby">
+                            <div class="productt ">
+                                <div class="product-image"
+                                     style="background-image: url(~);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">A Omron 3 Series Blood Pressure</h5>
+                                    <p><span>$</span><span class="price">39.99</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 pb-5 component cancer">
+                            <div class="productt ">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-2.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">A Sialkot Surgical Instruments</h5>
+                                    <p><span>$</span><span class="price">20.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  col-md-6 pb-5 component cardiology">
+                            <div class="productt ">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-3.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">Blue Stethoscope</h5>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p><span>$</span><span class="price">20.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  col-md-6 pb-5 component mri">
+                            <div class="productt ">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-4.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">Conventional Insulin Syringes</h5>
+                                    <p><span>$</span><span class="price">20.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  col-md-6 pb-5 component pulmonary">
+                            <div class="productt ">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-5.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">Blue Stethoscope</h5>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p><span>$</span><span class="price">20.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  col-md-6 pb-5 component surgery">
+                            <div class="productt ">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-6.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">Inox Medical Cups</h5>
+                                    <p><span>$</span><span class="price">39.99</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  col-md-6 pb-5 component neuro">
+                            <div class="productt ">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-7.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">Lidocaine Hydrochloride Injection</h5>
+                                    <p><span>$</span><span class="price">39.99</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 pb-5 component urology">
+                            <div class="productt ">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-8.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">Mouth Moisturizer Oral Gel</h5>
+                                    <p><span>$</span><span class="price">39.99</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  col-md-6 pb-5 component tips">
+                            <div class="productt  ">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-1.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">A Omron 3 Series Blood Pressure</h5>
+                                    <p><span>$</span><span class="price">39.99</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 pb-5 component health">
+                            <div class="productt ">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-10.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">Polime Oxygen Mask</h5>
+                                    <p><span>$</span><span class="price">17.99</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 pb-5 component massage">
+                            <div class="productt">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-10.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">Polime Oxygen Mask</h5>
+                                    <p><span>$</span><span class="price">17.99</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 pb-5 component uncategorized">
+                            <div class="productt">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-10.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">Polime Oxygen Mask</h5>
+                                    <p><span>$</span><span class="price">17.99</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 pb-5 component diagnostic">
+                            <div class="productt ">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-2.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">A Sialkot Surgical Instruments</h5>
+                                    <p><span>$</span><span class="price">20.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 pb-5 component medical">
+                            <div class="productt ">
+                                <div class="product-image"
+                                     style="background-image: url(~assets/images/product-2.jpg);">
+                                    <div class="basket-wishlist-compare d-flex justify-content-center">
+                                        <div class="add-basket text-center">
+                                            <i class="fas fa-shopping-basket"></i>
+                                        </div>
+                                        <div class="wishlist text-center"><i class="far fa-heart"></i></div>
+                                        <div class="compare text-center"><i class="fas fa-exchange-alt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="product-inf">
+                                    <h5 class="productt-name">A Sialkot Surgical Instruments</h5>
+                                    <p><span>$</span><span class="price">20.00</span></p>
+                                </div>
+                            </div>
+                        </div>*@

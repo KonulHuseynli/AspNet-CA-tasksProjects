@@ -1,0 +1,47 @@
+﻿@using front_to_back.Areas.Admin.ViewModels.FeaturedWorkComponent.FeaturedWorkComponentPhoto
+@model FeaturedWorkComponentPhotoUpdateViewModel
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">
+                            Update featured work component photo
+                        </p>
+                        <form enctype="multipart/form-data" method="post" asp-action="updatephoto" asp-controller="featuredworkcomponent" asp-area="admin" class="forms-sample">
+
+                            <div class="form-group">
+                                <label asp-for="Order"></label>
+                                <input asp-for="Order" />
+                                <span asp-validation-for="Order"></span>
+                            </div>
+                           
+
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <button class="btn btn-light">Cancel</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#Description'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+}

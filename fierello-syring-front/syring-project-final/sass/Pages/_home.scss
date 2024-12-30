@@ -1,0 +1,578 @@
+// #region header 
+.index-header-top {
+    background-color: $color-gray-darker;
+
+    span {
+        color: $color-gray-lighter;
+    }
+
+    i {
+        color: $color-gray-lighter;
+    }
+}
+
+// #endregion header
+
+
+
+// #region banner section
+.banner {
+    height: 700px;
+    position: relative;
+
+    .banner-page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        color: $color-dark-gray;
+        transition: 1.5s opacity linear;
+    }
+
+    .banner-page-1 {
+        z-index: 3;
+        opacity: 1;
+    }
+
+    .banner-page-2 {
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .banner-page-3 {
+        z-index: 1;
+        opacity: 0;
+    }
+
+    .caption {
+        font-size: 65px;
+        font-weight: $font-weight;
+        position: absolute;
+        top: 224px;
+        left: 74px;
+        color: $color-dark-gray;
+    }
+
+    .caption-1 {
+        max-width: 489px;
+        min-width: 489px;
+    }
+
+    .caption-2 {
+        min-width: 582px;
+        max-width: 582px;
+    }
+
+    .caption-3 {
+        min-width: 446px;
+        max-width: 446px;
+    }
+
+    .auxilary-caption {
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        position: absolute;
+        top: 426px;
+        left: 74px;
+    }
+
+    .button {
+        position: absolute;
+        top: 500px;
+        left: 74px;
+        padding: 19px 36px;
+    }
+
+    .bullets {
+        position: absolute;
+        top: 50%;
+        left: 97%;
+        height: 46px;
+        width: 10px;
+        z-index: 99;
+    }
+
+    .bullet {
+        position: absolute;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: $border-radius;
+        background-color: $color-white;
+        transition: .3s width linear;
+        cursor: pointer;
+    }
+
+    .bullet-1 {
+        top: 0px;
+    }
+
+    .bullet-2 {
+        top: 18px;
+    }
+
+    .bullet-3 {
+        top: 36px;
+    }
+
+    .selected,
+    .bullet:hover {
+        width: 20px;
+        background: $main-color;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: $overlay-color;
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+// #endregion banner section
+
+
+
+
+// #region fancy section
+.fancy {
+    padding: 120px 0px 90px 0px;
+
+    .fancy-item {
+        border: 1px solid $color-border;
+        cursor: pointer;
+        transition-property: opacity, transform, box-shadow !important;
+
+        &:hover {
+            box-shadow: $box-shadow;
+        }
+
+        .fancy-item-content {
+            padding: 59px 30px 40px;
+
+            .fancy-item-content-icon {
+                margin-bottom: 44px;
+            }
+
+            .fancy-item-content-text-title {
+                margin-bottom: 18px;
+                font-weight: $font-weight;
+                font-size: 18px;
+            }
+
+            .fancy-item-content-text-main {
+                margin-bottom: 25px;
+                font-size: 14px;
+                color: $color-dark-light;
+            }
+
+            .fancy-item-content-text-details {
+                color: $main-color;
+                font-size: 14px;
+                font-weight: $font-weight;
+            }
+        }
+    }
+
+}
+
+// #endregion fancy section
+
+// #region about section
+.about-home {
+    background-color: $color-gray-lighter;
+}
+
+// #endregion about section
+
+
+// #region vision section
+.vision {
+    padding: 120px 0 100px;
+
+
+    .vision-bottom {
+        margin-top: 80px;
+    }
+
+}
+
+// #endregion vision section
+
+
+// #region video section
+.video {
+    height: 539px;
+    position: relative;
+
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $overlay-color;
+
+        .play-button {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: $main-color;
+            z-index: 1;
+            cursor: pointer;
+
+            .scaling-background {
+                position: relative;
+                right: 8px;
+                height: 1px;
+                width: 1px;
+                border-radius: 50%;
+                background-color: $color-dark-gray;
+                z-index: -1;
+                transition: .3s all linear;
+            }
+
+            .triangle {
+                position: relative;
+                left: 5px;
+                font-size: 45px;
+                color: $color-white;
+            }
+
+            &:hover .scaling-background {
+                transform: scale(91.5);
+            }
+        }
+    }
+}
+
+// #endregion video section
+
+
+// #region department section
+.department {
+    padding: 82px 0;
+
+    .department-center {
+        margin-top: 50px;
+    }
+
+    .item {
+        box-shadow: $box-shadow;
+        padding: 33px 33px 27px 19px;
+        transition-property: opacity, transform, background-color !important;
+
+        .item-icon {
+            margin-right: 19px;
+        }
+
+        .item-text {
+            line-height: 1.8;
+        }
+
+        .title {
+            font-weight: $font-weight;
+        }
+    }
+
+
+    .department-bottom {
+        margin-top: 80px;
+
+        .button {
+            padding: 15.5px 35px;
+            background-color: $color-dark-gray;
+
+            &:hover {
+                background-color: $main-color;
+            }
+        }
+    }
+}
+
+// #endregion department section
+
+
+// #region why-choose section
+.why-choose {
+    background-color: $color-gray-lighter;
+    position: relative;
+
+
+    .why-choose-left {
+        padding: 111px 15px 100px;
+
+        .description {
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .checks {
+            margin-top: 40px;
+
+            .check-element {
+                padding-bottom: 14px;
+
+                .check {
+                    color: $main-color;
+                    font-size: 12px;
+                    margin-right: 10px;
+                    font-weight: $font-weight;
+                }
+            }
+        }
+    }
+
+    .why-choose-right {
+
+        div{
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position-x: center;
+        }
+    }
+}
+
+// #endregion why-choose section
+
+// #region count-to
+.count-to{
+    padding: 92px 15px 95px;
+    background-color: $color-white;
+    box-shadow: $box-shadow;
+    position: relative;
+    top: -70px;
+
+    .count-item{
+        position: relative;
+
+        p{
+            font-size: 60px;
+            color: $main-color;
+        }
+    
+        span{
+            font-size: 20px;
+            margin-top: 20px;
+            color: $color-dark-light;
+        }
+
+        .count-plus{
+            position: absolute;
+            right: 75px;
+            top: 10px;
+            color: $main-color;
+        }
+
+        .plus-experience{
+            right: 95px;
+        }
+    }
+
+}
+// #endregion count-to
+
+
+
+
+// #region doctors section
+.doctors {
+    padding: 0 0 68px;
+
+    .doctors-top-right {
+        display: inline-block;
+    }
+
+    .doctor-info {
+        padding-top: 41px;
+
+        .doctor-name {
+            color: $color-black-lighter;
+            font-weight: 600;
+        }
+
+        .doctor-speciality {
+            color: $color-dark-light;
+            text-transform: uppercase;
+        }
+
+        i {
+            color: $main-color;
+        }
+    }
+
+    .doctors-bottom {
+        margin-top: 40px;
+
+        .doctor-item {
+            box-shadow: $box-shadow;
+            padding: 50px 10px 47px;
+            transition: .5s all linear;
+            position: relative;
+            top:0;
+
+            .social-media {
+
+                a {
+                    padding: 0 9.5px;
+
+                    i {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            &:hover{
+                background-color: $main-color;
+                top: -10px;
+
+                .doctor-name{
+                    color: $color-white
+                }
+
+                .doctor-speciality{
+                    color: $color-white;
+                }
+
+                i{
+                    color: $color-white;
+                }
+
+              
+            }
+        }
+
+    }
+}
+
+// #endregion doctors section
+
+
+// #region testimonials section
+.testimonials {
+    background-color: $color-gray-lighter;
+    padding: 82px 0 84px 0;
+
+    .comments {
+        overflow: hidden;
+        padding-top: 40px;
+
+        .comment-item {
+            padding: 0 15px 46px;
+            outline: none;
+
+            .comment-content {
+                background: $color-white;
+                padding: 40px 30px;
+                position: relative;
+                top: 0;
+                transition: .5s all linear;
+
+                &:hover{
+                    background-color: $main-color;
+                    top: -10px;
+                    
+                    .author-info{
+                        color: $color-white;
+
+                        .author-position{
+                            color: $color-white !important;
+                        }
+                    }
+
+                    .description{
+                        color: $color-white;
+                    }
+
+                }
+
+                .author-info {
+                    padding-top: 30px;
+
+                    .avatar {
+                        max-width: 55px;
+                        border-radius: 50%;
+                    }
+
+                    .author-info-right {
+                        padding-left: 15px;
+                        padding-top: 5px;
+
+                        .author-name {
+                            font-size: 18px;
+                        }
+
+                        .author-position {
+                            font-size: 14px;
+                            color: $color-dark-light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// #endregion testimonials section
+
+// #region latest-news section
+.latest-news {
+    padding: 74px 0;
+
+    .latest-news-bottom {
+        padding-top: 46px;
+
+        img{
+            width: 100%;
+        }
+
+        .news-item {
+            outline: none;
+
+            .date-type {
+                padding: 20px 25px 10px;
+                color: $color-dark-light;
+                font-size: 14px;
+            }
+
+            .item-text {
+                font-size: 18px;
+                padding: 0 15px;
+                font-weight: $font-weight;
+            }
+
+        }
+    }
+}
+
+// #endregion latest-news section
+
+
+
+// #region modal section
+.modal {
+    background-color: $overlay-color;
+
+    .quit-button {
+        color: $color-white;
+        position: relative;
+        top: -10px;
+
+        .quit-x {
+            cursor: pointer;
+        }
+    }
+}
+
+// #endregion modal section

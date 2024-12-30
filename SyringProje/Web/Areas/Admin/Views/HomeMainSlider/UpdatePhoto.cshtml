@@ -1,0 +1,30 @@
+﻿@using WebApp.ViewModels.HomeMainSlider.HomeMainSliderPhoto
+@model HomeMainSliderPhotoUpdateVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Update  Home Main Slider Photo
+                        </p>
+                        <form enctype="multipart/form-data" method="post" asp-action="updatephoto" asp-controller="homemainslider" asp-area="admin" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="Order">Order</label>
+                                <input class="form-control" asp-for="Order">
+                                <span asp-validation-for="Order"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <a class="btn btn-danger" asp-action="index" asp-controller="homemainslider" asp-area="admin"> Cancel</a>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

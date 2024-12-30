@@ -1,0 +1,36 @@
+﻿@using front_to_back.Models
+@model RecentWorkComponent
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+             <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  
+                  <p class="card-description">
+                    DElete RECENT WOrk Component
+                  </p>
+                  
+                   <span>TITLE:</span>
+                   <span>@Model.Title</span>
+
+                   <br/>
+                       <br/>
+                   <span>TExt:</span>
+                   <span>@Model.Text</span>
+
+                        <br/>
+                            <br/>
+
+                  <span>FilePath:</span>
+                   <span>@Model.FilePath</span>
+
+                   <form method="post" asp-action="deletecomponent" asp-controller="recentwork" asp-area="admin" asp-route-id="@Model.Id">
+                      <a class="btn btn-primary" asp-action="index" asp-controller="recentwork" asp-area="admin"> Cancel</a>
+                   </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

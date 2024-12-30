@@ -1,0 +1,30 @@
+// #region sub-heading
+.sub-heading {
+    color: $main-color;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+// #endregion sub-heading
+
+
+// #region heading
+.heading {
+    font-size: 36px;
+    font-weight: $font-weight;
+    line-height: 52px;
+}
+// #endregion heading
+
+
+// #region description
+.description {
+    font-weight: $font-weight-bolder;
+    font-size:15px;
+    color: $color-gray;
+    line-height: 1.7;
+}
+// #endregion description

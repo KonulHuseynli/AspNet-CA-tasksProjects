@@ -1,0 +1,29 @@
+.instagram{
+    .col-4{
+        padding: 0 5px;
+    }
+    img{
+        max-width:100%;
+    }
+
+    .instagram-content{
+        position: relative;
+
+        .overlay{
+            opacity: 0;
+            transition:opacity .3s;
+
+            .insta-icon{
+                color: $color-white;
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
+
+        &:hover{
+            .overlay{
+                opacity: 1;
+            }
+        }
+    }
+}

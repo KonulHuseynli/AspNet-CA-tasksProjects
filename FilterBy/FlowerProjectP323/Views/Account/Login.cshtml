@@ -1,0 +1,55 @@
+﻿@using FlowerProjectP323.ViewModel.Account
+@model AccountLoginViewModel
+@{
+    var returnUrl = Context.Request.Query["returnUrl"];
+    var test = "test";
+}
+<div class="mkdf-content">
+    <div class="mkdf-content-inner">
+        <div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-title-content-va-middle"
+             style="height: 225px;background-color: #fafaf9" data-height="225">
+            <div class="mkdf-title-wrapper" style="height: 225px">
+                <div class="mkdf-title-inner">
+                    <div class="mkdf-grid">
+                        <h1 class="mkdf-page-title entry-title">My Account</h1>
+                        <span class="mkdf-page-subtitle">Where flowers are our inspiration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mkdf-container mkdf-default-page-template">
+            <div class="mkdf-container-inner clearfix">
+                <div class="mkdf-grid-row">
+                    <div class="mkdf-page-content-holder mkdf-grid-col-12">
+                        <div class="woocommerce">
+                            <div class="woocommerce-notices-wrapper"></div>
+                            <h2>Login</h2>
+                            <form method="post" asp-action="login" asp-controller="account">
+                                <input asp-for="ReturnUrl" type="hidden"  value="@returnUrl"/>
+                           
+                                <div class="form-group">
+                                    <label class="form-label" asp-for="UserName"></label>
+                                    <input class="form-control" asp-for="UserName" />
+                                    <span asp-validation-for="UserName"></span>
+                                </div>
+                             
+                                <div class="form-group">
+                                    <label class="form-label" asp-for="Password"></label>
+                                    <input asp-for="Password" class="form-control" />
+                                    <span asp-validation-for="Password"></span>
+                                </div>
+                                  <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-block mb-4" type="submit">Sign in</button>
+                                </div>
+                                <div>
+                                   Dont have an account? <a asp-action="login" asp-controller="account">Register</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+﻿@using FlowerProjectP323.Areas.Admin.ViewModels.Blog
+@using FlowerProjectP323.Models
+@model BlogUpdateViewModel
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Product Component
+                        </p>
+                        <form enctype="multipart/form-data" method="post" asp-action="update" asp-controller="blog" asp-area="admin" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="Title">Title</label>
+                                <input class="form-control" asp-for="Title">
+                                <span asp-validation-for="Title"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CreateDate">DateTime</label>
+                                <input type="date" class="form-control" asp-for="CreateDate">
+                                <span asp-validation-for="CreateDate"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Description">Description</label>
+                                <textarea class="form-control" asp-for="Description"></textarea>
+                                <span asp-validation-for="Description"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MainPhoto">MainPhoto</label>
+                                <input class="form-control" asp-for="MainPhoto">
+                                <span asp-validation-for="MainPhoto"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <a class="btn btn-danger" asp-action="index" asp-controller="blog" asp-area="admin"> Cancel</a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#Description'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+}

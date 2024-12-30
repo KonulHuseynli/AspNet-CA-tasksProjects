@@ -1,0 +1,30 @@
+﻿@*@using FlowerProjectP323.ViewModel.Basket
+@model List<BasketListItemViewModel>
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Photo</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Stock Quantity</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var basketProduct in Model)
+        {
+        <tr>
+            <td><img style="width:100px" src="~/assets/img/@basketProduct.PhotoName" /></td>
+            <td>@basketProduct.Title</td>
+            <td>@basketProduct.Price</td>
+            <td>@basketProduct.Quantity</td>
+            <td>@basketProduct.StockQuantity</td>
+            <td><button>Delete</button></td>
+        </tr>
+
+        }
+  
+    </tbody>
+</table>*@

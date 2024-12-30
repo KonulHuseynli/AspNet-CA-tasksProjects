@@ -1,0 +1,92 @@
+﻿@using Web.ViewModels.Shop
+@model ShopIndexVM
+
+<main>
+    <!-- main-frame section starts -->
+    <section class="main-frame no-select" style="background-image: url(assets/images/shop-page-title.jpg);">
+        <div class="main-frame-title">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <div class="main-frame-title-text">
+                            Shop
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="main-frame-breadcrumb">
+                            Home / Products
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- main-frame section ends -->
+    <!-- products section starts -->
+    <section class="products no-select">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="left-sidebar">
+                        <div class="search">
+
+                            <h4>Search</h4>
+                            <div class="search-product">
+                                <form method="get" asp-action="index" asp-controller="shop">
+                                    <input type="search" asp-for="Title" placeholder="Search products"
+                                           class="search-product-input">
+                                    <img src="assets/images/search-product-icon.png" alt="" class="search-product-icon">
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="categories">
+                            <h4>Product categories</h4>
+                            <ul>
+
+                        @*        @foreach (var category in Model.Products)
+                                {
+                                    <li data-id="@category.Id" id="categor">@category.Title (@category.Products.Count) </li>
+                                }*@
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 products-side">
+                    <div class="row" id="Tural">
+
+
+                        @foreach (var product in Model.Products)
+                        {
+                            <div class="col-lg-4 col-md-6 pb-5">
+                                <div class="productt" id="@product.Id">
+                                    <div class="product-image"
+                                     style="background-image: url(assets/img/@product.PhotoName);">
+                                        <div class="basket-wishlist-compare d-flex justify-content-center">
+                                            <div id="addToCart"  data-title="@product.Title" data-photoname="@product.PhotoName" data-id="@product.Id" class=" text-center">
+                                                <i class="fas fa-shopping-basket"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-inf">
+                                        <h5 class="productt-name" id="titledi">@product.Title</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+
+
+                        <div class="pagination d-flex justify-content-center">
+                            <div class="pagination-element pagination-active">1</div>
+                            <div class="pagination-element">2</div>
+                            <div class="pagination-element">></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- products section ends -->
+</main>

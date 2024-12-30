@@ -1,0 +1,38 @@
+﻿@using Core.Constants
+@using Web.Areas.Admin.ViewModels.FineJewellerAnimation
+@model FineJewellerAnimationIndexVM
+
+<a class="btn btn-primary" asp-action="create" asp-controller="finejewelleranimation">Create</a>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">CreateAt</th>
+            <th scope="col">ModifiedAt</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fineJewellerAnimation in Model.FineJewellerAnimations)
+        {
+            <tr>
+                <td>@fineJewellerAnimation.Id</td>
+                <td>@fineJewellerAnimation.Title</td>
+                <td>@fineJewellerAnimation.CreatedAt.ToShortDateString()</td>
+                <td>@fineJewellerAnimation.ModifiedAt.ToShortDateString()</td>
+                <td><img class="img-thumbnail" style="width:50px ; height:50px; object-fit:cover" src="~/assets2/images/@fineJewellerAnimation.Photo" /></td>
+
+                <td>
+                    <a class="btn btn-primary" asp-action="update" asp-controller="finejewelleranimation" asp-route-id="@fineJewellerAnimation.Id">Update</a>
+                    <form method="post" asp-action="delete" asp-controller="finejewelleranimation" asp-route-id="@fineJewellerAnimation.Id">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -1,0 +1,143 @@
+﻿@using FlowerProjectP323.Areas.Admin.ViewModels.Product
+@using static FlowerProjectP323.Models.Product
+@model ProductIndexViewModel
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Products</h4>
+                        <h5>Filter by</h5>
+                        <div class="filter-section">
+                            <form method="get" asp-action="index" asp-controller="product">
+                                   <div class="row">
+                                          <div class="col-6">
+
+                                <div class="form-group">
+                                    <label asp-for="Title"></label>
+                                    <input class="form-control" asp-for="Title" />
+                                </div>
+
+                           </div>
+
+                                          <div class="col-6">
+
+                                        <div class="form-group">
+                                            <label asp-for="CategoryId"></label>
+                                            <select class="form-select" asp-for="CategoryId" asp-items="Model.Categories">
+                                            <option value="">Choose!</option>
+                                            </select>
+                                        </div>
+                                          </div>
+                                          
+                                          <div class="col-6">
+                                              <div class="form-group">
+                                                 <label asp-for="MinPrice"></label>
+                                                 <input class="form-control" asp-for="MinPrice" />
+                                              </div>
+                                          </div>
+                                          <div class="col-6">
+                                        <div class="form-group">
+                                            <label asp-for="MaxPrice"></label>
+                                            <input class="form-control" asp-for="MaxPrice" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label asp-for="MinQuantity"></label>
+                                            <input class="form-control" asp-for="MinQuantity" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label asp-for="MaxQuantity"></label>
+                                            <input class="form-control" asp-for="MaxQuantity" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label asp-for="CreatedAtStart"></label>
+                                            <input type="date" class="form-control" asp-for="CreatedAtStart" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label asp-for="CreatedAtEnd"></label>
+                                            <input type="date" class="form-control" asp-for="CreatedAtEnd" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+
+                                        <div class="form-group">
+                                            <label asp-for="Status"></label>
+                                            <select class="form-select" asp-for="Status" asp-items="Html.GetEnumSelectList<ProductStatus>()">
+                                                <option value="">Choose!</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                
+                                </div>
+                                <div>
+                                    <button type="Submit" class="btn btn-warning">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                        <a style="margin-top:50px" class="btn btn-primary" asp-action="create" asp-controller="product" asp-area="admin">CREATE Product</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+
+                                        <th>Quantity</th>
+                                    
+                                      
+                                        <th>Status</th>
+                                        <th>CreatedAt</th>
+                                        <th>Photo</th>
+                                        <th>Actions</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var product in Model.Products)
+                                    {
+                                        <tr>
+                                            <td>@product.Id</td>
+                                            <td>@product.Name</td>
+                                            <td>@product.Category.Title</td>
+                                            <td>@product.Price</td>
+
+                                            <td>@product.Quantity</td>
+                                            
+                                           
+                                            <td>@product.Status</td>
+                                            <td>@product.CreatedAt.ToShortDateString()</td>
+                                            
+                                            <td><img width="70%" height="70%" src="~/assets/img/@product.MainPhotoName"></td>
+                                            <td>
+                                                <a class="btn btn-primary" asp-action="update" asp-controller="product" asp-area="admin" asp-route-id="@product.Id">Update</a>
+                                                <a class="btn btn-danger" asp-action="delete" asp-controller="product" asp-area="admin" asp-route-id="@product.Id">Delete</a>
+                                                <a class="btn btn-info" asp-action="details" asp-controller="product" asp-area="admin" asp-route-id="@product.Id">Details</a>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

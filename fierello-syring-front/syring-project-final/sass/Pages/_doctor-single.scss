@@ -1,0 +1,222 @@
+// #region doctor-single
+.doctor-single {
+    position: relative;
+
+    .section-left-color {
+        background-color: $color-gray-lighter;
+    }
+
+    // #region section-left
+    .section-left {
+        padding-top: 100px;
+        padding-right: 30px;
+        padding-bottom: 100px;
+
+        .img-container {
+            width: 95%;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .doctor-name {
+            font-weight: $font-weight;
+            padding-top: 50px;
+        }
+
+        .sub-heading {
+            padding-top: 20px;
+        }
+
+        .social-media {
+            a {
+                width: 35px !important;
+                height: 35px !important;
+                line-height: 35px;
+                border-radius: 50%;
+                background-color: $color-lighter;
+                font-size: 16px;
+                display: inline-block;
+                text-align: center;
+                margin-right: 10px;
+                transition: .5s background-color linear;
+
+                &:hover {
+                    background-color: $main-color;
+                }
+
+                &:hover i {
+                    color: $color-white;
+                }
+
+
+            }
+        }
+
+        .qualification {
+            padding-top: 70px;
+
+            .qualification-title {
+                margin-bottom: 20px;
+
+                i {
+                    color: $main-color;
+                    font-size: 25px;
+                    margin-right: 15px;
+                }
+
+                h4 {
+                    font-weight: $font-weight;
+                }
+            }
+
+            .qualification-description {
+                font-size: 15px;
+                padding-top: 23px;
+                border-top: 1px solid $color-border;
+                color: $color-gray;
+            }
+
+        }
+
+        .contact-info {
+            padding-top: 70px;
+
+            .contact-info-title {
+                margin-bottom: 20px;
+
+                i {
+                    color: $main-color;
+                    font-size: 25px;
+                    margin-right: 15px;
+                }
+
+                h4 {
+                    font-weight: $font-weight;
+                }
+            }
+
+            .contact-info-description {
+                padding-top: 24px;
+                border-top: 1px solid $color-border;
+
+                i {
+                    margin-right: 15px;
+                }
+
+                span {
+                    color: $color-gray;
+                }
+            }
+        }
+
+        .working-time {
+            padding-top: 70px;
+
+
+            .working-time-title {
+                margin-bottom: 20px;
+
+                i {
+                    color: $main-color;
+                    font-size: 25px;
+                    margin-right: 15px;
+                }
+
+                h4 {
+                    font-weight: $font-weight;
+                }
+            }
+
+            .working-time-description {
+                padding-top: 24px;
+                border-top: 1px solid $color-border;
+
+                li {
+                    font-size: $font-size;
+                    padding-bottom: 10px;
+
+                    .day {
+                        color: $color-gray;
+                    }
+                }
+            }
+        }
+    }
+
+    // #endregion section-left
+
+
+    // #region section-right
+    .section-right {
+        padding-top: 100px;
+        padding-left: 30px;
+        padding-bottom: 100px;
+        background-color: $color-white;
+
+        .introducting {
+            h4 {
+                font-weight: $font-weight;
+            }
+
+            .introducting-subtitle {
+                padding-top: 40px;
+                padding-bottom: 20px;
+
+                blockquote {
+                    padding-right: 20px;
+                    color: $main-color;
+                    font-size: 18px;
+                }
+
+                span {
+                    color: $color-black-lighter;
+                    font-weight: $font-weight;
+                    font-size: 15px;
+                }
+
+            }
+
+            .introducting-text {
+                p {
+                    font-size: $font-size;
+                    color: $color-gray;
+                }
+
+            }
+        }
+
+        .skill {
+            padding-top: 70px;
+
+            .skill-title {
+                h4 {
+                    font-weight: $font-weight;
+                }
+            }
+
+            .skill-content {
+                padding-top: 40px;
+
+                li {
+                    padding-bottom: 14px;
+                    font-weight: $font-weight;
+
+                    i {
+                        color: $main-color;
+                        font-size: 12px;
+                        padding-right: 15px;
+                    }
+
+                    span {
+                        font-size: $font-size;
+                    }
+                }
+            }
+        }
+    }
+    // #endregion section-right
+}
+
+// #endregion doctor-single

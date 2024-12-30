@@ -1,0 +1,28 @@
+﻿@using FlowerProjectP323.Models
+@model Category
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Update category
+                        </p>
+                        <form method="post" asp-action="update" asp-controller="category" asp-area="admin" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="Title">Title</label>
+                                <input class="form-control" asp-for="Title">
+                                <span asp-validation-for="Title"></span>
+                            </div>
+
+                            <button style="background-image: linear-gradient(to left top, #30af0c, #717900, #6d4903, #492618, #121111);" type="submit" class="btn btn-primary me-2">Submit</button>
+                            <button style="background-image: linear-gradient(to left top, #c10a17, #95151d, #68191d, #3d1819, #121111);" class="btn btn-light">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

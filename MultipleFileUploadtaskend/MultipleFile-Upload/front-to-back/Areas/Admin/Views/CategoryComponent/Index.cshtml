@@ -1,0 +1,49 @@
+﻿@using front_to_back.Areas.Admin.ViewModels.CategoryComponent
+@model CategoryComponentIndexViewModel
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Category Components</h4>
+                        <a class="btn btn-primary" asp-action="create" asp-controller="categorycomponent" asp-area="admin">Create category component</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Category</th>
+                                        <th>Description</th>
+                                        <th>Photo</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var categoryComponent in Model.CategoryComponents)
+                                    {
+                                        <tr>
+                                            <td>@categoryComponent.Id</td>
+                                            <td>@categoryComponent.Title</td>
+                                            <td>@categoryComponent.Category.Title</td>
+                                            <td>@Html.Raw(categoryComponent.Description)</td>
+                                            <td>
+                                                <img src="~/assets/img/@categoryComponent.FilePath">
+                                            <td class="d-flex">
+
+                                                <a class="btn btn-primary " asp-action="update" asp-controller="categorycomponent" asp-area="admin" asp-route-id=@categoryComponent.Id>Update</a>
+                                                <a class="btn btn-primary btn-details mx-3" asp-action="details" asp-controller="categorycomponent" asp-area="admin" asp-route-id=@categoryComponent.Id>Details</a>
+                                                <a class="btn btn-primary btn-danger " asp-action="delete" asp-controller="categorycomponent" asp-area="admin" asp-route-id=@categoryComponent.Id>Delete</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

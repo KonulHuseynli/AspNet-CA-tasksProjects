@@ -1,0 +1,9 @@
+﻿@using WebApp.ViewModels.Category
+@model CategoryUpdateVM
+
+<form asp-action="update" asp-controller="category" method="post">
+    <label asp-for="Title"></label>
+    <input asp-for="Title" />
+    <span asp-validation-for="Title"></span>
+    <button type="submit">Update</button>
+</form>

@@ -1,0 +1,30 @@
+// #region main-frame-2 section
+.main-frame-2 {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .main-frame-2-title {
+      padding: 105px 0;
+
+        .main-frame-2-title-text {
+            font-size: 36px;
+            font-weight: $font-weight;
+            color: $color-white;
+            z-index: 1;
+        }
+
+        .custom-title-text{
+            color: $color-black-lighter;
+            font-size: 50px ;
+        }
+
+        .main-frame-2-title-breadcrumb{
+            color: $color-white;
+            z-index: 1;
+        }
+
+    }
+}
+// #endregion main-frame-2 section

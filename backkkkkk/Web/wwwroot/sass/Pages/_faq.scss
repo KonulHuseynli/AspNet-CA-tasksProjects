@@ -1,0 +1,126 @@
+// questions section starts
+.questions {
+    background-color: $color-gray-lighter;
+    padding: 100px 0;
+
+    .tab {
+        padding: 23px 34px 23px;
+        background-color: $color-white;
+        margin-bottom: 20px;
+        border: 1px solid $color-border;
+        transition: .5s all linear;
+        cursor: pointer;
+
+        &:hover {
+            border-color: $main-color;
+        }
+
+        &:hover .tab-title {
+            color: $main-color;
+        }
+
+        .tab-title {
+            font-size: 18px;
+            font-weight: $font-weight;
+            margin-bottom: 15px;
+            margin-top: 10px;
+
+        }
+
+        .tab-text {
+            font-size: $font-size;
+            color: $color-dark-light;
+        }
+    }
+
+    .questions-content {
+        padding: 29px 45px 46px;
+        background-color: $color-white;
+
+        .tab-title {
+            font-weight: $font-weight;
+        }
+
+        .help-center {
+            font-size: 15px;
+            color: $color-dark-light;
+            font-weight: $font-weight-bolder;
+            margin-bottom: 20px;
+
+            .help-link {
+                transition: .3s all linear;
+                color: $color-dark-gray;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+    #accordion {
+        list-style: none;
+        padding: 2px;
+    }
+
+    #accordion>li {
+        display: block;
+        list-style: none;
+    }
+
+    #accordion>li>span {
+        display: block;
+        margin-top: 20px;
+        padding: 15px 20px;
+        background: url(../assets/images/down-arrow.svg) no-repeat 96% 6px $color-white;
+        background-position-y: center;
+        background-size: 10px;
+        border: 1px solid $color-border;
+        font-weight: normal;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: $font-weight;
+        transition: .5s background-color linear;
+
+
+        &:hover {
+            background-color: $main-color;
+            color: white;
+        }
+    }
+
+
+    #accordion>li>div {
+        list-style: none;
+        display: none;
+        overflow: auto;
+        padding: 23px 30px;
+        font-size: 14px;
+        border-left: 1px solid $color-border;
+        border-right: 1px solid $color-border;
+        border-bottom: 1px solid $color-border;
+    }
+
+    #accordion>ul li {
+        font-weight: normal;
+        cursor: auto;
+        padding: 0 0 0 7px;
+    }
+
+    #accordion a {
+        text-decoration: none;
+    }
+
+
+    #accordion li>span.active {
+        background: url(../assets/images/expand-arrow.svg) no-repeat 96% 6px $main-color;
+        background-position-y: center;
+        background-size: 10px;
+        color: white;
+    }
+
+}
+// questions section ends
+
+
+

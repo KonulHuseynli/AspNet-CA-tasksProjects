@@ -1,0 +1,62 @@
+﻿@using PurpleBuzz_Backend.Areas.Admin.ViewModels
+@model ContactIntroIndexViewModel
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Basic Table</h4>
+                        <a class="btn" asp-action="create" asp-controller="contactintro" asp-area="admin">Add new Component</a>
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Description (As Html tag)</th>
+                                        <th>FilePath</th>
+                                        <th colspan="3" style="text-align:center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                                @foreach (var contactIntroComponent in Model.ContactIntroComponents)
+                                        {
+                                                    <tr>
+                                                        <td>@contactIntroComponent.Id</td>
+                                                        <td>@contactIntroComponent.Title</td>
+                                                        <td>@contactIntroComponent.Description</td>
+                                                        <td>@contactIntroComponent.FilePath</td>
+                                                        <td>
+                                                            <a asp-action="update" asp-controller="contactintro" asp-area="admin" asp-route-id="@contactIntroComponent.Id" class="btn btn-primary">Update</a>
+                                                        </td>
+                                                        <td>
+                                                            <a asp-action="delete" asp-controller="contactintro" asp-area="admin" asp-route-id="@contactIntroComponent.Id" class="btn btn-danger">Delete</a>
+                                                        </td>
+                                                        <td>
+                                                            <a asp-action="details" asp-controller="contactintro" asp-area="admin" asp-route-id="@contactIntroComponent.Id" class="btn btn-info">Details</a>
+                                                        </td>
+                                                    </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:../../partials/_footer.html -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com </a>2021</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard  </a> templates</span>
+        </div>
+    </footer>
+    <!-- partial -->
+</div>

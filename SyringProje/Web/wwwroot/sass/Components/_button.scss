@@ -1,0 +1,18 @@
+// #region button properties 
+.button{
+    display: inline-block;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    background-color: $main-color;
+    color: $color-white;
+    border-radius: $border-radius;
+    transition: .3s background-color linear;
+    transition-property: opacity,transform,background-color !important;
+    cursor: pointer;
+    padding: 16px 36px;
+
+    &:hover{
+        background-color: $color-dark-gray;
+    }
+}
+// #endregion button properties 

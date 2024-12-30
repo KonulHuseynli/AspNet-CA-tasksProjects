@@ -1,0 +1,63 @@
+// #region form section starts
+.form{
+    padding: 80px 0;
+
+    .form-title{
+        font-size: 36px;
+        font-weight: $font-weight;
+        margin-bottom: 15px;
+        color: $color-black-lighter;
+    }
+
+    .form-description{
+        font-size: $font-size;
+        color: $color-dark-light;
+        font-weight: $font-weight-bolder;
+    }
+
+    .form-content{
+        padding-top: 40px;
+
+        .social-media{
+            padding-top: 30px;
+            a{
+                padding:0 16.5px;
+                font-size: 24px;
+                color: $color-black-lighter;
+            }
+
+            &:hover{
+                color: $color-black-lighter ;
+            }
+        }
+
+        .form-item{
+            border-bottom: 1px solid $color-border;
+            padding: 20px 0;
+    
+            .form-item-info{
+                padding-left: 33px;
+        
+                .form-item-title{
+                    font-size: 18px;
+                    font-weight: $font-weight;
+                    text-transform: uppercase;
+                }
+        
+                .form-item-text{
+                    font-size: 15px;
+                    color: $color-dark-light;
+                    line-height: 1.8;
+                }
+            }
+        }
+
+        .last-form-item{
+            border: none;
+        }
+
+
+    }
+}
+// #endregion form section ends
+

@@ -1,0 +1,185 @@
+﻿@using System.Web
+@using Web.ViewModels.FineJeweller
+@model FineJewellerIndexVM
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link class="favicon" rel="icon" type="image/x-icon" href="../assets/logoDavm.png">
+    <title>Fine Jeweller-David Morris</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="~/finejeweller.css">
+    <link rel="stylesheet" href="~/homepage.css">
+    <link rel="stylesheet" href="~/general.css">
+</head>
+<body>
+
+<section class="FineJewellerPage">
+
+        <nav class="navigation">
+            <div class="nav__container">
+                <div class="nav_left">
+
+
+                    <ul class="nav_menu" id="menu-links">
+                        <li><a href="#">HIGH JEWELLERY</a></li>
+                        <li><a href="#">FINE JEWELLERY</a></li>
+                        <li><a href="#">WEDDING</a></li>
+                        <li><a href="#">BESPOKE</a></li>
+                    </ul>
+                </div>
+                <a href="./homepage.html" class="nav_logo">
+                    <div class="nav_logo">
+                        <img src="~/assets/firstpart/LogoDavidMorris.png">
+                    </div>
+                </a>
+                <div class="nav_right">
+                    <a class="logininf" href=""><img src="~/assets/log-in (1).png"></a>
+                    <a class="registerinf" href=""><img src="~/assets/edit.png"></a>
+                    <a class="nav_like">
+                        <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7831 3.5L13.3456 2.98438C14.8925 1.4375 17.0956 0.734375 19.205 1.10938C22.4393 1.625 24.83 4.4375 24.83 7.71875V7.95312C24.83 9.92188 23.9862 11.7969 22.58 13.1094L14.0956 21.0312C13.7675 21.3594 13.2987 21.5 12.83 21.5C12.3143 21.5 11.8456 21.3594 11.5175 21.0312L3.03308 13.1094C1.62683 11.7969 0.829956 9.92188 0.829956 7.95312V7.71875C0.829956 4.4375 3.17371 1.625 6.40808 1.10938C8.51746 0.734375 10.7206 1.4375 12.2675 2.98438L12.7831 3.5ZM12.7831 5.65625L11.1893 4.01562C10.0175 2.84375 8.32996 2.28125 6.64246 2.5625C4.15808 2.98438 2.28308 5.14062 2.28308 7.71875V7.95312C2.28308 9.5 2.93933 10.9531 4.06433 11.9844L12.5487 19.9062C12.5956 20 12.6893 20 12.7831 20C12.9237 20 13.0175 20 13.0643 19.9062L21.5487 11.9844C22.6737 10.9531 23.33 9.5 23.33 7.95312V7.71875C23.33 5.14062 21.455 2.98438 18.9706 2.5625C17.2831 2.28125 15.5956 2.84375 14.4237 4.01562L12.7831 5.65625Z" fill="#0D2A39"></path>
+                        </svg></i>
+                    </a>
+
+                    <a href="./shop/shop.html" class="nav_card">
+                        <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 6V4.5C6 2.01562 7.96875 0 10.5 0C12.9844 0 15 2.01562 15 4.5V6H18.75C19.9688 6 21 7.03125 21 8.25V19.5C21 21.9844 18.9844 24 16.5 24H4.5C1.96875 24 0 21.9844 0 19.5V8.25C0 7.03125 0.984375 6 2.25 6H6ZM7.5 6H13.5V4.5C13.5 2.85938 12.1406 1.5 10.5 1.5C8.8125 1.5 7.5 2.85938 7.5 4.5V6ZM2.25 7.5C1.82812 7.5 1.5 7.875 1.5 8.25V19.5C1.5 21.1875 2.8125 22.5 4.5 22.5H16.5C18.1406 22.5 19.5 21.1875 19.5 19.5V8.25C19.5 7.875 19.125 7.5 18.75 7.5H15V11.25C15 11.6719 14.625 12 14.25 12C13.8281 12 13.5 11.6719 13.5 11.25V7.5H7.5V11.25C7.5 11.6719 7.125 12 6.75 12C6.32812 12 6 11.6719 6 11.25V7.5H2.25Z" fill="#0D2A39"></path>
+                        </svg></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        @foreach (var fineJewellerAnimation in Model.fineJewellerAnimations)
+        {
+            <div class="videopart">
+                <img src="~/assets2/images/@fineJewellerAnimation.Photo" alt="">
+    </div>
+    }
+    <section class="fine">
+        <div class="fine__container">
+            <div class="fine__text">
+                Elegant yet playful, and at once timeless and of-the-moment. Our fine jewellery collections combine the creative design ‘twist’ that has become the David Morris signature with the finest gemstones, pearls and precious metals.<br>
+                <br>
+                Discover the beautiful collections online and at our boutiques worldwide.
+            </div>
+        </div>
+    </section>
+
+    <section class="finejewellery">
+        <div class="finejewellery_info">
+            <div class="finejewellery_content">
+                <h2 class="finejewellery__title">CATEGORY</h2>
+            </div>
+        </div>
+        <div class="finejewellery_slider  finejewellery_slider_pointer ">
+            <div class="slider_images">
+                        @foreach (var product in Model.products)
+                        {
+                <div>
+                    <img width="20%" src="~/assets2/images/@product.PhotoName">
+                    <a  href="../FindJewCategory/Necklaces/">@product.Title </a>
+                </div>
+                        }
+              
+                
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="collection">
+        <div class="collection__list">
+            @foreach(var fJProducts in Model.FJProducts)
+            {
+            <div class="collection__item">
+                <a href="#" class="collection__img">
+                            <img loading="lazy" src="~/assets2/images/@fJProducts.PhotoName" alt="Asiyah" width="544" height="474">
+                </a>
+                        <div class="collection__name">@fJProducts.Title</div>
+                        <div class="collection__desc">@fJProducts.Description</div>
+                <a href="#" class="collection__view line-button">
+                    view collection
+                </a>
+            </div>
+           }
+        </div>
+    </section>
+
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>About us</h2>
+                <div class="content">
+                    <p>If you would like to organise a personal consultation or a video appointment, or require any other assistance please fill out the form below and we’ll be in touch to confirm your appointment and answer your queries..</p>
+                    <div class="social">
+                        <a href=""><img src="~/assets/facebook.svg" alt=""></a>
+                        <a href="#"><img src="~/assets/twitter.svg"></a>
+                        <a href=""><img src="~/assets/instagram.svg"></a>
+                        <a href=""><img src="~/assets/youtube.svg"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <img src="~/assets/map.svg">
+                        <span class="text">DAVID MORRIS INTERNATIONAL~NEW BOND STREET LONDON</span>
+                        <br>
+                    </div>
+                    <div class="phone">
+                        <img src="~/assets/telephone.svg">
+                        <span class="text">+089-765432100</span>
+                    </div>
+                    <div class="email">
+                        <img src="~/assets/envelope.svg">
+                        <span class="text">abc@example.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>Contact us</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message *</div>
+                            <textarea rows="2" cols="25" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div>
+                <span class="credit">Created By <a href="https://www.codingnepalweb.com">DAVID MORRIS</a> | </span>
+                <span class="far fa-copyright"></span><span> © 2023 DAVID MORRIS. WEBSITE BY IMAGINAIRE..</span>
+            </div>
+        </div>
+    </footer>
+</section>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" ></script>
+<script type="text/javascript">
+        $('.slider_images ').slick({
+        slidesToShow: 3,
+        slidesToScroll: 2
+        });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+.catalog__right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 70px;
+    width: 100%;
+}
+.catalog__products {
+    display: grid;
+    gap: 35px 16px;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+}
+
+.catalog__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    width: 100%;
+}
+.product__name {
+    color:#0d2a39;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2.5px;
+    line-height: 1.2;
+    margin-top: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+a, li, p, ul {
+    font-family:'Cinzel';
+}
+a {
+    text-decoration: none;
+}
+.product__price {
+    color:#b4886f;
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.product__image {
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.product__image img {
+    height: auto;
+    object-fit: cover;
+    transition: .5s;
+    width: 100%;
+}
+.woocommerce img, .woocommerce-page img {
+    max-width: 100%;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+img {
+    display: block;
+}
+audio, canvas, embed, iframe, img, object, svg, video {
+    vertical-align: middle;
+}
+.product__image img.hover ,.product__image.hover-visible:hover img {
+    opacity: 0;
+    visibility: hidden;
+}
+.product__image img.hover {
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: .5s;
+    z-index: 2;
+}
+.product__image img {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}

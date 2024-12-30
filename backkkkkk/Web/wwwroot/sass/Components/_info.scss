@@ -1,0 +1,29 @@
+// #region info 
+.item {
+    cursor: pointer;
+
+    &:hover .title {
+        color: $main-color;
+    }
+
+    .item-icon {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .item-content {
+        display: flow-root;
+
+        .title {
+            font-size: 18px;
+            transition: .3s all linear;
+        }
+
+        .item-text {
+            font-size: 14px;
+            color: $color-black-lighter;
+        }
+
+    }
+}
+// #endregion info 

@@ -1,0 +1,48 @@
+﻿@using WebApp.ViewModels.Doctor
+@model DoctorUpdateVM
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                          Doctors
+                        </p>
+                        <form enctype="multipart/form-data" method="post" asp-action="update" asp-controller="doctor" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="FullName">Title</label>
+                                <input class="form-control" asp-for="FullName">
+                                <span asp-validation-for="FullName"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Description">Description</label>
+                                <input class="form-control" asp-for="Description">
+                                <span asp-validation-for="Description"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Qualification">Qualification</label>
+                                <input class="form-control" asp-for="Qualification">
+                                <span asp-validation-for="Qualification"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Photo">Photo</label>
+                                <input class="form-control" asp-for="Photo">
+                                <span asp-validation-for="Photo"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <a class="btn btn-danger" asp-action="index" asp-controller="doctor"> Cancel</a>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

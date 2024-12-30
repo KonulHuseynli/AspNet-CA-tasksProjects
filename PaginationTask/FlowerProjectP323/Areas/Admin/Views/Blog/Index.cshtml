@@ -1,0 +1,50 @@
+﻿@using FlowerProjectP323.Areas.Admin.ViewModels.Blog
+@model BlogIndexViewModel
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog</h4>
+                        <a class="btn btn-primary" asp-action="create" asp-controller="blog" asp-area="admin">CREATE Blog</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>Photo</th>
+                                        <th>DateTime</th>
+                                        <th>Actions</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var blog in Model.Blogs)
+                                    {
+                                        <tr>
+                                            <td>@blog.Id</td>
+                                            <td>@blog.Title</td>
+                                            <td>@Html.Raw(blog.Description)</td>
+                                            <td><img src="~/assets/img/@blog.PhotoName" /></td>
+                                            <td>@blog.CreateDate.ToString("dd/MM/yyyy")</td>
+                                            <td>
+                                                <a class="btn btn-primary" asp-action="update" asp-controller="blog" asp-area="admin" asp-route-id="@blog.Id">Update</a>
+                                                <a class="btn btn-danger" onclick="confirm('Eminsinizmi?')" asp-action="delete" asp-controller="blog" asp-area="admin" asp-route-id="@blog.Id">Delete</a>
+                                                <a class="btn btn-info" asp-action="details" asp-controller="blog" asp-area="admin" asp-route-id="@blog.Id">Details</a>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

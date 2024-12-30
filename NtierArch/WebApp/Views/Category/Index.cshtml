@@ -1,0 +1,35 @@
+﻿@using WebApp.ViewModels.Category
+@model CategoryIndexVm
+
+<a class="btn btn-warning" asp-action="create" asp-controller="category">Create</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Modified At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var category in Model.Categories)
+        {
+        <tr>
+            <td>@category.Id</td>
+            <td>@category.Title</td>
+            <td>@category.CreatedAt.ToShortDateString()</td>
+                <td>@category.ModifiedAt.ToShortDateString()</td>
+                <td>
+                    <a class="btn btn-primary" asp-action="update" asp-controller="category" asp-route-id="@category.Id">Update</a>
+                   <form asp-route-id="@category.Id" method="post" asp-action="delete" asp-controller="category">
+                     @*  <input id="id" name="id"  value="@category.Id" type="hidden" />*@
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                   </form>
+                </td>
+        </tr>
+
+        }
+       
+    </tbody>
+</table>
